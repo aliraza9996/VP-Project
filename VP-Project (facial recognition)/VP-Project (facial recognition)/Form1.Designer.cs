@@ -42,7 +42,7 @@
             // 
             this.button1.Location = new System.Drawing.Point(43, 42);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(150, 150);
+            this.button1.Size = new System.Drawing.Size(152, 109);
             this.button1.TabIndex = 0;
             this.button1.Text = "Mark Attendance";
             this.button1.UseVisualStyleBackColor = true;
@@ -52,7 +52,7 @@
             // 
             this.button2.Location = new System.Drawing.Point(43, 224);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(150, 150);
+            this.button2.Size = new System.Drawing.Size(152, 109);
             this.button2.TabIndex = 1;
             this.button2.Text = "View Attendance";
             this.button2.UseVisualStyleBackColor = true;
@@ -62,7 +62,7 @@
             // 
             this.button3.Location = new System.Drawing.Point(432, 42);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(150, 150);
+            this.button3.Size = new System.Drawing.Size(152, 109);
             this.button3.TabIndex = 2;
             this.button3.Text = "Add Student";
             this.button3.UseVisualStyleBackColor = true;
@@ -72,7 +72,7 @@
             // 
             this.button4.Location = new System.Drawing.Point(240, 224);
             this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(150, 150);
+            this.button4.Size = new System.Drawing.Size(152, 109);
             this.button4.TabIndex = 3;
             this.button4.Text = "View Students";
             this.button4.UseVisualStyleBackColor = true;
@@ -82,7 +82,7 @@
             // 
             this.button5.Location = new System.Drawing.Point(240, 42);
             this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(150, 150);
+            this.button5.Size = new System.Drawing.Size(152, 109);
             this.button5.TabIndex = 4;
             this.button5.Text = "Delete Attendance";
             this.button5.UseVisualStyleBackColor = true;
@@ -92,7 +92,7 @@
             // 
             this.button6.Location = new System.Drawing.Point(623, 42);
             this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(150, 150);
+            this.button6.Size = new System.Drawing.Size(152, 109);
             this.button6.TabIndex = 5;
             this.button6.Text = "Delete Student";
             this.button6.UseVisualStyleBackColor = true;
@@ -102,7 +102,7 @@
             // 
             this.button7.Location = new System.Drawing.Point(432, 224);
             this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(150, 150);
+            this.button7.Size = new System.Drawing.Size(152, 109);
             this.button7.TabIndex = 6;
             this.button7.Text = "Import Attendance Sheet";
             this.button7.UseVisualStyleBackColor = true;
@@ -112,7 +112,7 @@
             // 
             this.button8.Location = new System.Drawing.Point(623, 224);
             this.button8.Name = "button8";
-            this.button8.Size = new System.Drawing.Size(150, 150);
+            this.button8.Size = new System.Drawing.Size(152, 109);
             this.button8.TabIndex = 7;
             this.button8.Text = "EXIT";
             this.button8.UseVisualStyleBackColor = true;
@@ -133,7 +133,8 @@
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
             this.Name = "Form1";
-            this.Text = "Form1";
+            this.Text = " ";
+            this.Load += new System.EventHandler(this.Form1_Load);
             this.ResumeLayout(false);
 
         }

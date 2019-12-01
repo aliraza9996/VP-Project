@@ -13,3 +13,6 @@ C:\Users\Ali\documents\visual studio 2013\Projects\VP-Project (facial recognitio
 C:\Users\Ali\documents\visual studio 2013\Projects\VP-Project (facial recognition)\VP-Project (facial recognition)\obj\Debug\VP_Project__facial_recognition_.Delete_Student.resources
 C:\Users\Ali\documents\visual studio 2013\Projects\VP-Project (facial recognition)\VP-Project (facial recognition)\obj\Debug\VP_Project__facial_recognition_.View_Attendance.resources
 C:\Users\Ali\documents\visual studio 2013\Projects\VP-Project (facial recognition)\VP-Project (facial recognition)\obj\Debug\VP_Project__facial_recognition_.View_Students.resources
+C:\Users\Ali\Documents\GitHub\VP-Project\VP-Project (facial recognition)\VP-Project (facial recognition)\bin\Debug\VP-Project (facial recognition).exe.config
+C:\Users\Ali\Documents\GitHub\VP-Project\VP-Project (facial recognition)\VP-Project (facial recognition)\obj\Debug\VP-Project (facial recognition).exe
+C:\Users\Ali\Documents\GitHub\VP-Project\VP-Project (facial recognition)\VP-Project (facial recognition)\obj\Debug\VP-Project (facial recognition).pdb
