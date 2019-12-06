@@ -16,3 +16,18 @@ C:\Users\Ali\documents\visual studio 2013\Projects\VP-Project (facial recognitio
 C:\Users\Ali\Documents\GitHub\VP-Project\VP-Project (facial recognition)\VP-Project (facial recognition)\bin\Debug\VP-Project (facial recognition).exe.config
 C:\Users\Ali\Documents\GitHub\VP-Project\VP-Project (facial recognition)\VP-Project (facial recognition)\obj\Debug\VP-Project (facial recognition).exe
 C:\Users\Ali\Documents\GitHub\VP-Project\VP-Project (facial recognition)\VP-Project (facial recognition)\obj\Debug\VP-Project (facial recognition).pdb
+C:\Users\Ali\Documents\GitHub\VP-Project\VP-Project (facial recognition)\VP-Project (facial recognition)\bin\Debug\VP-Project (facial recognition).exe
+C:\Users\Ali\Documents\GitHub\VP-Project\VP-Project (facial recognition)\VP-Project (facial recognition)\bin\Debug\VP-Project (facial recognition).pdb
+C:\Users\Ali\Documents\GitHub\VP-Project\VP-Project (facial recognition)\VP-Project (facial recognition)\obj\Debug\VP-Project (facial recognition).csprojResolveAssemblyReference.cache
+C:\Users\Ali\Documents\GitHub\VP-Project\VP-Project (facial recognition)\VP-Project (facial recognition)\obj\Debug\VP_Project__facial_recognition_.Add_Student.resources
+C:\Users\Ali\Documents\GitHub\VP-Project\VP-Project (facial recognition)\VP-Project (facial recognition)\obj\Debug\VP_Project__facial_recognition_.Delete_Attendance.resources
+C:\Users\Ali\Documents\GitHub\VP-Project\VP-Project (facial recognition)\VP-Project (facial recognition)\obj\Debug\VP_Project__facial_recognition_.Delete_Student.resources
+C:\Users\Ali\Documents\GitHub\VP-Project\VP-Project (facial recognition)\VP-Project (facial recognition)\obj\Debug\VP_Project__facial_recognition_.Form1.resources
+C:\Users\Ali\Documents\GitHub\VP-Project\VP-Project (facial recognition)\VP-Project (facial recognition)\obj\Debug\VP_Project__facial_recognition_.Mark_Attendance.resources
+C:\Users\Ali\Documents\GitHub\VP-Project\VP-Project (facial recognition)\VP-Project (facial recognition)\obj\Debug\VP_Project__facial_recognition_.Properties.Resources.resources
+C:\Users\Ali\Documents\GitHub\VP-Project\VP-Project (facial recognition)\VP-Project (facial recognition)\obj\Debug\VP_Project__facial_recognition_.View_Attendance.resources
+C:\Users\Ali\Documents\GitHub\VP-Project\VP-Project (facial recognition)\VP-Project (facial recognition)\obj\Debug\VP_Project__facial_recognition_.View_Students.resources
+C:\Users\Ali\Documents\GitHub\VP-Project\VP-Project (facial recognition)\VP-Project (facial recognition)\obj\Debug\VP-Project (facial recognition).csproj.GenerateResource.Cache
+C:\Users\Ali\Documents\GitHub\VP-Project\VP-Project (facial recognition)\VP-Project (facial recognition)\bin\Debug\Emgu.CV.xml
+C:\Users\Ali\Documents\GitHub\VP-Project\VP-Project (facial recognition)\VP-Project (facial recognition)\bin\Debug\Emgu.CV.UI.xml
+C:\Users\Ali\Documents\GitHub\VP-Project\VP-Project (facial recognition)\VP-Project (facial recognition)\bin\Debug\Emgu.Util.xml
