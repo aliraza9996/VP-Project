@@ -62,16 +62,27 @@ namespace VP_Project__facial_recognition_
 
         private void button1_Click(object sender, EventArgs e)
         {
-
-            camera = new Capture();
-            camera.QueryFrame();
-            
-            Application.Idle+=new EventHandler(FrameProcedure);
+            if (camera==null)
+            {
+                try
+                {
+                    camera = new Capture();
+                }
+                catch (NullReferenceException exp)
+                {
+                    MessageBox.Show(exp.Message);
+                }
+            }
+            if (camera!=null)
+            {
+                camera.QueryFrame();
+                Application.Idle+=new EventHandler(FrameProcedure);
+            }
+               
         }
 
 private void FrameProcedure(object sender, EventArgs e)
 {
-    //throw new NotImplementedException();
     Frame = camera.QueryFrame().Resize(320, 240, Emgu.CV.CvEnum.INTER.CV_INTER_CUBIC);
     grayface = Frame.Convert<Gray, Byte>();
     MCvAvgComp[][] facesDetectedNow = grayface.DetectHaarCascade(faceDetected, 1.2, 10, Emgu.CV.CvEnum.HAAR_DETECTION_TYPE.DO_CANNY_PRUNING, new Size(20, 20));
@@ -89,11 +100,18 @@ private void FrameProcedure(object sender, EventArgs e)
         }
     }
     imageBox1.Image = Frame;
+    
 }
 
 private void pictureBox1_Click(object sender, EventArgs e)
 {
 
+}
+
+private void button2_Click(object sender, EventArgs e)
+{
+    Frame.Save("C:\ali.jpg");
+    MessageBox.Show("Saved successfully");
 }
       
     }

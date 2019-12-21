@@ -62,7 +62,7 @@ namespace VP_Project__facial_recognition_
 
         private void button8_Click(object sender, EventArgs e)
         {
-
+            this.Close();
         }
 
         private void Form1_Load(object sender, EventArgs e)
