@@ -31,6 +31,7 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.btnMarkAttendance = new System.Windows.Forms.Button();
+            this.imageList1 = new System.Windows.Forms.ImageList(this.components);
             this.button2 = new System.Windows.Forms.Button();
             this.btnAddStudent = new System.Windows.Forms.Button();
             this.btnViewStudents = new System.Windows.Forms.Button();
@@ -38,7 +39,6 @@
             this.button6 = new System.Windows.Forms.Button();
             this.btnImportAttendance = new System.Windows.Forms.Button();
             this.btnExit = new System.Windows.Forms.Button();
-            this.imageList1 = new System.Windows.Forms.ImageList(this.components);
             this.label1 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
@@ -56,6 +56,28 @@
             this.btnMarkAttendance.TabIndex = 1;
             this.btnMarkAttendance.UseVisualStyleBackColor = false;
             this.btnMarkAttendance.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // imageList1
+            // 
+            this.imageList1.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("imageList1.ImageStream")));
+            this.imageList1.TransparentColor = System.Drawing.Color.Transparent;
+            this.imageList1.Images.SetKeyName(0, "addstudent.png");
+            this.imageList1.Images.SetKeyName(1, "delete attendance.png");
+            this.imageList1.Images.SetKeyName(2, "deletestudent.png");
+            this.imageList1.Images.SetKeyName(3, "download (1).png");
+            this.imageList1.Images.SetKeyName(4, "education_add-512.png");
+            this.imageList1.Images.SetKeyName(5, "import.jpg");
+            this.imageList1.Images.SetKeyName(6, "markattendance.png");
+            this.imageList1.Images.SetKeyName(7, "scan.png");
+            this.imageList1.Images.SetKeyName(8, "view attendance.png");
+            this.imageList1.Images.SetKeyName(9, "viewstudents.jpg");
+            this.imageList1.Images.SetKeyName(10, "exit-1806557-1533018.png");
+            this.imageList1.Images.SetKeyName(11, "view.png");
+            this.imageList1.Images.SetKeyName(12, "addstudent.png");
+            this.imageList1.Images.SetKeyName(13, "images.png");
+            this.imageList1.Images.SetKeyName(14, "63-512.png");
+            this.imageList1.Images.SetKeyName(15, "delete attendance.png");
+            this.imageList1.Images.SetKeyName(16, "exit.png");
             // 
             // button2
             // 
@@ -154,28 +176,6 @@
             this.btnExit.TabIndex = 7;
             this.btnExit.UseVisualStyleBackColor = true;
             this.btnExit.Click += new System.EventHandler(this.button8_Click);
-            // 
-            // imageList1
-            // 
-            this.imageList1.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("imageList1.ImageStream")));
-            this.imageList1.TransparentColor = System.Drawing.Color.Transparent;
-            this.imageList1.Images.SetKeyName(0, "addstudent.png");
-            this.imageList1.Images.SetKeyName(1, "delete attendance.png");
-            this.imageList1.Images.SetKeyName(2, "deletestudent.png");
-            this.imageList1.Images.SetKeyName(3, "download (1).png");
-            this.imageList1.Images.SetKeyName(4, "education_add-512.png");
-            this.imageList1.Images.SetKeyName(5, "import.jpg");
-            this.imageList1.Images.SetKeyName(6, "markattendance.png");
-            this.imageList1.Images.SetKeyName(7, "scan.png");
-            this.imageList1.Images.SetKeyName(8, "view attendance.png");
-            this.imageList1.Images.SetKeyName(9, "viewstudents.jpg");
-            this.imageList1.Images.SetKeyName(10, "exit-1806557-1533018.png");
-            this.imageList1.Images.SetKeyName(11, "view.png");
-            this.imageList1.Images.SetKeyName(12, "addstudent.png");
-            this.imageList1.Images.SetKeyName(13, "images.png");
-            this.imageList1.Images.SetKeyName(14, "63-512.png");
-            this.imageList1.Images.SetKeyName(15, "delete attendance.png");
-            this.imageList1.Images.SetKeyName(16, "exit.png");
             // 
             // label1
             // 
