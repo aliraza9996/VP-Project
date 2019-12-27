@@ -99,8 +99,8 @@
             this.btnSave = new System.Windows.Forms.Button();
             this.cameraBox = new Emgu.CV.UI.ImageBox();
             this.imageList2 = new System.Windows.Forms.ImageList(this.components);
-            this.button6 = new System.Windows.Forms.Button();
-            this.button10 = new System.Windows.Forms.Button();
+            this.btnBack = new System.Windows.Forms.Button();
+            this.btnNext = new System.Windows.Forms.Button();
             this.pnlMarkAttendance.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.pnlDeleteAttendance.SuspendLayout();
@@ -271,9 +271,9 @@
             this.pnlMarkAttendance.Controls.Add(this.button4);
             this.pnlMarkAttendance.Controls.Add(this.button5);
             this.pnlMarkAttendance.Controls.Add(this.pictureBox1);
-            this.pnlMarkAttendance.Location = new System.Drawing.Point(113, 75);
+            this.pnlMarkAttendance.Location = new System.Drawing.Point(96, 75);
             this.pnlMarkAttendance.Name = "pnlMarkAttendance";
-            this.pnlMarkAttendance.Size = new System.Drawing.Size(62, 96);
+            this.pnlMarkAttendance.Size = new System.Drawing.Size(82, 96);
             this.pnlMarkAttendance.TabIndex = 18;
             this.pnlMarkAttendance.Visible = false;
             // 
@@ -317,7 +317,7 @@
             this.pnlDeleteAttendance.Controls.Add(this.button7);
             this.pnlDeleteAttendance.Controls.Add(this.button8);
             this.pnlDeleteAttendance.Controls.Add(this.pictureBox2);
-            this.pnlDeleteAttendance.Location = new System.Drawing.Point(323, 83);
+            this.pnlDeleteAttendance.Location = new System.Drawing.Point(307, 72);
             this.pnlDeleteAttendance.Name = "pnlDeleteAttendance";
             this.pnlDeleteAttendance.Size = new System.Drawing.Size(84, 88);
             this.pnlDeleteAttendance.TabIndex = 19;
@@ -353,9 +353,9 @@
             // 
             this.pnlViewAttendance.Controls.Add(this.button2);
             this.pnlViewAttendance.Controls.Add(this.listBox1);
-            this.pnlViewAttendance.Location = new System.Drawing.Point(512, 95);
+            this.pnlViewAttendance.Location = new System.Drawing.Point(493, 75);
             this.pnlViewAttendance.Name = "pnlViewAttendance";
-            this.pnlViewAttendance.Size = new System.Drawing.Size(54, 50);
+            this.pnlViewAttendance.Size = new System.Drawing.Size(91, 74);
             this.pnlViewAttendance.TabIndex = 20;
             this.pnlViewAttendance.Visible = false;
             // 
@@ -400,6 +400,8 @@
             // 
             // pnlViewAllStudents
             // 
+            this.pnlViewAllStudents.Controls.Add(this.btnBack);
+            this.pnlViewAllStudents.Controls.Add(this.btnNext);
             this.pnlViewAllStudents.Controls.Add(this.pictureBox5);
             this.pnlViewAllStudents.Controls.Add(this.pictureBox4);
             this.pnlViewAllStudents.Controls.Add(this.pictureBox3);
@@ -409,9 +411,9 @@
             this.pnlViewAllStudents.Controls.Add(this.enroll3);
             this.pnlViewAllStudents.Controls.Add(this.enroll2);
             this.pnlViewAllStudents.Controls.Add(this.enroll1);
-            this.pnlViewAllStudents.Location = new System.Drawing.Point(0, 3);
+            this.pnlViewAllStudents.Location = new System.Drawing.Point(485, 244);
             this.pnlViewAllStudents.Name = "pnlViewAllStudents";
-            this.pnlViewAllStudents.Size = new System.Drawing.Size(899, 416);
+            this.pnlViewAllStudents.Size = new System.Drawing.Size(110, 102);
             this.pnlViewAllStudents.TabIndex = 23;
             this.pnlViewAllStudents.Visible = false;
             // 
@@ -445,9 +447,9 @@
             this.name3.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.name3.Location = new System.Drawing.Point(334, 276);
             this.name3.Name = "name3";
-            this.name3.Size = new System.Drawing.Size(77, 24);
+            this.name3.Size = new System.Drawing.Size(205, 24);
             this.name3.TabIndex = 7;
-            this.name3.Text = "label17";
+            this.name3.Text = "Name will show here";
             // 
             // name2
             // 
@@ -455,9 +457,10 @@
             this.name2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.name2.Location = new System.Drawing.Point(334, 164);
             this.name2.Name = "name2";
-            this.name2.Size = new System.Drawing.Size(77, 24);
+            this.name2.Size = new System.Drawing.Size(205, 24);
             this.name2.TabIndex = 6;
-            this.name2.Text = "label16";
+            this.name2.Text = "Name will show here";
+            this.name2.Click += new System.EventHandler(this.name2_Click);
             // 
             // name1
             // 
@@ -465,9 +468,10 @@
             this.name1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.name1.Location = new System.Drawing.Point(334, 50);
             this.name1.Name = "name1";
-            this.name1.Size = new System.Drawing.Size(77, 24);
+            this.name1.Size = new System.Drawing.Size(205, 24);
             this.name1.TabIndex = 5;
-            this.name1.Text = "label15";
+            this.name1.Text = "Name will show here";
+            this.name1.Click += new System.EventHandler(this.name1_Click);
             // 
             // enroll3
             // 
@@ -475,9 +479,9 @@
             this.enroll3.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.enroll3.Location = new System.Drawing.Point(72, 276);
             this.enroll3.Name = "enroll3";
-            this.enroll3.Size = new System.Drawing.Size(77, 24);
+            this.enroll3.Size = new System.Drawing.Size(205, 24);
             this.enroll3.TabIndex = 2;
-            this.enroll3.Text = "label12";
+            this.enroll3.Text = "Enroll will show here";
             // 
             // enroll2
             // 
@@ -485,9 +489,9 @@
             this.enroll2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.enroll2.Location = new System.Drawing.Point(72, 164);
             this.enroll2.Name = "enroll2";
-            this.enroll2.Size = new System.Drawing.Size(77, 24);
+            this.enroll2.Size = new System.Drawing.Size(205, 24);
             this.enroll2.TabIndex = 1;
-            this.enroll2.Text = "label11";
+            this.enroll2.Text = "Enroll will show here";
             // 
             // enroll1
             // 
@@ -495,9 +499,9 @@
             this.enroll1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.enroll1.Location = new System.Drawing.Point(72, 50);
             this.enroll1.Name = "enroll1";
-            this.enroll1.Size = new System.Drawing.Size(66, 24);
+            this.enroll1.Size = new System.Drawing.Size(205, 24);
             this.enroll1.TabIndex = 0;
-            this.enroll1.Text = "label9";
+            this.enroll1.Text = "Enroll will show here";
             // 
             // pnlDeleteStudent
             // 
@@ -509,9 +513,9 @@
             this.pnlDeleteStudent.Controls.Add(this.txtboxDelStuSearch);
             this.pnlDeleteStudent.Controls.Add(this.btnDelInPnlDelstu);
             this.pnlDeleteStudent.Controls.Add(this.pnlSearchinPnlDel);
-            this.pnlDeleteStudent.Location = new System.Drawing.Point(299, 217);
+            this.pnlDeleteStudent.Location = new System.Drawing.Point(299, 227);
             this.pnlDeleteStudent.Name = "pnlDeleteStudent";
-            this.pnlDeleteStudent.Size = new System.Drawing.Size(75, 140);
+            this.pnlDeleteStudent.Size = new System.Drawing.Size(111, 130);
             this.pnlDeleteStudent.TabIndex = 22;
             this.pnlDeleteStudent.Visible = false;
             this.pnlDeleteStudent.Paint += new System.Windows.Forms.PaintEventHandler(this.pnlDeleteStudent_Paint);
@@ -582,7 +586,7 @@
             this.btnDelInPnlDelstu.TabIndex = 5;
             this.btnDelInPnlDelstu.Text = "Delete";
             this.btnDelInPnlDelstu.UseVisualStyleBackColor = true;
-            this.btnDelInPnlDelstu.Click += new System.EventHandler(this.button6_Click);
+            this.btnDelInPnlDelstu.Click += new System.EventHandler(this.Button6_Click);
             // 
             // pnlSearchinPnlDel
             // 
@@ -895,25 +899,25 @@
             this.imageList2.ImageSize = new System.Drawing.Size(16, 16);
             this.imageList2.TransparentColor = System.Drawing.Color.Transparent;
             // 
-            // button6
+            // btnBack
             // 
-            this.button6.Location = new System.Drawing.Point(269, 380);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(75, 23);
-            this.button6.TabIndex = 13;
-            this.button6.Text = "button6";
-            this.button6.UseVisualStyleBackColor = true;
-            this.button6.Click += new System.EventHandler(this.button6_Click_1);
+            this.btnBack.Location = new System.Drawing.Point(302, 328);
+            this.btnBack.Name = "btnBack";
+            this.btnBack.Size = new System.Drawing.Size(75, 23);
+            this.btnBack.TabIndex = 13;
+            this.btnBack.Text = "Back";
+            this.btnBack.UseVisualStyleBackColor = true;
+            this.btnBack.Click += new System.EventHandler(this.button6_Click_1);
             // 
-            // button10
+            // btnNext
             // 
-            this.button10.Location = new System.Drawing.Point(379, 379);
-            this.button10.Name = "button10";
-            this.button10.Size = new System.Drawing.Size(75, 23);
-            this.button10.TabIndex = 14;
-            this.button10.Text = "button10";
-            this.button10.UseVisualStyleBackColor = true;
-            this.button10.Click += new System.EventHandler(this.button10_Click_1);
+            this.btnNext.Location = new System.Drawing.Point(412, 327);
+            this.btnNext.Name = "btnNext";
+            this.btnNext.Size = new System.Drawing.Size(75, 23);
+            this.btnNext.TabIndex = 14;
+            this.btnNext.Text = "Next";
+            this.btnNext.UseVisualStyleBackColor = true;
+            this.btnNext.Click += new System.EventHandler(this.button10_Click_1);
             // 
             // FaceRecognitionSystem
             // 
@@ -923,8 +927,6 @@
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.BackColor = System.Drawing.Color.Snow;
             this.ClientSize = new System.Drawing.Size(908, 423);
-            this.Controls.Add(this.button6);
-            this.Controls.Add(this.button10);
             this.Controls.Add(this.pnlMain);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.btnExit);
@@ -1040,8 +1042,8 @@
         private System.Windows.Forms.Label enroll3;
         private System.Windows.Forms.Label enroll2;
         private System.Windows.Forms.Label enroll1;
-        private System.Windows.Forms.Button button6;
-        private System.Windows.Forms.Button button10;
+        private System.Windows.Forms.Button btnBack;
+        private System.Windows.Forms.Button btnNext;
     }
 }
 

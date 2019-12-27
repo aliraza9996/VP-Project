@@ -22,7 +22,7 @@ namespace KSLR_R_FaceRecognitionsSystem
         List<string> ListName = new List<string>();
         List<string> ListPath = new List<string>();
         int showdata = 0;
-        int i = 0;
+        int i = 0, j = 1;
         //Variables 
         MCvFont font = new MCvFont(FONT.CV_FONT_HERSHEY_TRIPLEX, 0.6d, 0.6d);
 
@@ -290,11 +290,6 @@ namespace KSLR_R_FaceRecognitionsSystem
                     {
                        MessageBox.Show("No data found");
                     }
-                 
-
-
-
-
                 }
                 catch (SqlException exp)
                 {
@@ -309,7 +304,7 @@ namespace KSLR_R_FaceRecognitionsSystem
           
         }
 
-        private void button6_Click(object sender, EventArgs e)
+        private void Button6_Click(object sender, EventArgs e)
         {
             Connection connObj = new Connection();
             SqlConnection connectMe = connObj.conn();
@@ -344,7 +339,6 @@ namespace KSLR_R_FaceRecognitionsSystem
                 SqlDataReader Reader = null;
                 try
                 {
-
                 cmd.CommandText = "Select * from Students";
                     Reader = cmd.ExecuteReader();
                     if (Reader.HasRows)
@@ -382,54 +376,91 @@ namespace KSLR_R_FaceRecognitionsSystem
                 {
                     connectMe.Close();
                 }
+            i = 0;
+            j = 1;
             showData(i);
            //}
         }
         public void showData(int c)
         {
-            while (i < ListEnroll.Count)
+            i = c;
+            //i++;
+            while(i<ListEnroll.Count)
             {
-                if (i < ListEnroll.Count)
+           if (i < ListEnroll.Count)
                 {
                     enroll1.Text = ListEnroll[i];
                     name1.Text = ListName[i];
                     pictureBox3.Image = Image.FromFile(ListPath[i]);
-                    i++;
                 }
-
+                i++;
+                j++;
                 if (i < ListEnroll.Count)
                 {
                     enroll2.Text = ListEnroll[i];
                     name2.Text = ListName[i];
                     pictureBox4.Image = Image.FromFile(ListPath[i]);
-                    i++;
                 }
-
+                i++;
+                j++;
                 if (i < ListEnroll.Count)
                 {
                     enroll3.Text = ListEnroll[i];
                     name3.Text = ListName[i];
                     pictureBox5.Image = Image.FromFile(ListPath[i]);
-                    i++;
                 }
-                if (i%3==0)
+                if (j%3==0)
                 {
                     break;
                 }
 
             }
-
+            
+            if (i >= ListEnroll.Count - 1)
+            {
+                btnNext.Enabled = false;
+            }
 
         }
 
         private void button10_Click_1(object sender, EventArgs e)
         {
-            showData(i++);
+            btnBack.Enabled = true;
+            enroll1.Text = "";
+            name1.Text = "";
+            pictureBox3.Image = null;
+            enroll2.Text = "";
+            name2.Text = "";
+            pictureBox4.Image = null;
+            enroll3.Text = "";
+            name3.Text = "";
+            pictureBox5.Image = null;
+            i++;
+            j++;
+            showData(i);
         }
 
         private void button6_Click_1(object sender, EventArgs e)
         {
-            showData(i - 3);
+            btnNext.Enabled = true;
+            if (i<ListEnroll.Count)
+            {
+                btnBack.Enabled = false;
+
+            }
+            i = i - 5;
+            j = j - 5;
+            showData(i);
+        }
+
+        private void name1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void name2_Click(object sender, EventArgs e)
+        {
+
         }
 
         private void btnImportAttendance_Click(object sender, EventArgs e)
