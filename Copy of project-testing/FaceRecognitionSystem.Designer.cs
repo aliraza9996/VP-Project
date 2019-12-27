@@ -53,7 +53,29 @@
             this.button2 = new System.Windows.Forms.Button();
             this.listBox1 = new System.Windows.Forms.ListBox();
             this.pnlMain = new System.Windows.Forms.Panel();
+            this.pnlViewAllStudents = new System.Windows.Forms.Panel();
+            this.pictureBox5 = new System.Windows.Forms.PictureBox();
+            this.pictureBox4 = new System.Windows.Forms.PictureBox();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.name3 = new System.Windows.Forms.Label();
+            this.name2 = new System.Windows.Forms.Label();
+            this.name1 = new System.Windows.Forms.Label();
+            this.enroll3 = new System.Windows.Forms.Label();
+            this.enroll2 = new System.Windows.Forms.Label();
+            this.enroll1 = new System.Windows.Forms.Label();
+            this.pnlDeleteStudent = new System.Windows.Forms.Panel();
+            this.pbDelStu = new System.Windows.Forms.PictureBox();
+            this.lblDelStudentNAme = new System.Windows.Forms.Label();
+            this.lblDelStudent = new System.Windows.Forms.Label();
+            this.label10 = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
+            this.txtboxDelStuSearch = new System.Windows.Forms.TextBox();
+            this.btnDelInPnlDelstu = new System.Windows.Forms.Button();
+            this.pnlSearchinPnlDel = new System.Windows.Forms.Button();
             this.pnlAddStudent = new System.Windows.Forms.Panel();
+            this.imageBoxFinal = new Emgu.CV.UI.ImageBox();
+            this.txtBoxEnrollment = new System.Windows.Forms.TextBox();
+            this.txtBoxLBL = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.ttxtBoxName = new System.Windows.Forms.TextBox();
@@ -61,12 +83,6 @@
             this.imageBox1 = new Emgu.CV.UI.ImageBox();
             this.btnSaveFace = new System.Windows.Forms.Button();
             this.button9 = new System.Windows.Forms.Button();
-            this.pnlViewStudents = new System.Windows.Forms.Panel();
-            this.listBox2 = new System.Windows.Forms.ListBox();
-            this.pnlDeleteStudent = new System.Windows.Forms.Panel();
-            this.button6 = new System.Windows.Forms.Button();
-            this.button10 = new System.Windows.Forms.Button();
-            this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.btnStart = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
             this.lblCountAllFaces = new System.Windows.Forms.Label();
@@ -83,24 +99,26 @@
             this.btnSave = new System.Windows.Forms.Button();
             this.cameraBox = new Emgu.CV.UI.ImageBox();
             this.imageList2 = new System.Windows.Forms.ImageList(this.components);
-            this.txtBoxEnrollment = new System.Windows.Forms.TextBox();
-            this.txtBoxLBL = new System.Windows.Forms.Label();
-            this.imageBoxFinal = new Emgu.CV.UI.ImageBox();
+            this.button6 = new System.Windows.Forms.Button();
+            this.button10 = new System.Windows.Forms.Button();
             this.pnlMarkAttendance.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.pnlDeleteAttendance.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.pnlViewAttendance.SuspendLayout();
             this.pnlMain.SuspendLayout();
-            this.pnlAddStudent.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.imageBox1)).BeginInit();
-            this.pnlViewStudents.SuspendLayout();
-            this.pnlDeleteStudent.SuspendLayout();
+            this.pnlViewAllStudents.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
+            this.pnlDeleteStudent.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbDelStu)).BeginInit();
+            this.pnlAddStudent.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.imageBoxFinal)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.imageBox1)).BeginInit();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.IBOutput)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cameraBox)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.imageBoxFinal)).BeginInit();
             this.SuspendLayout();
             // 
             // imageList1
@@ -164,6 +182,7 @@
             this.btnViewStudents.Size = new System.Drawing.Size(145, 138);
             this.btnViewStudents.TabIndex = 12;
             this.btnViewStudents.UseVisualStyleBackColor = true;
+            this.btnViewStudents.Click += new System.EventHandler(this.btnViewStudents_Click);
             // 
             // btnDeleteAttendance
             // 
@@ -190,6 +209,7 @@
             this.btnDeleteStudent.Size = new System.Drawing.Size(145, 138);
             this.btnDeleteStudent.TabIndex = 14;
             this.btnDeleteStudent.UseVisualStyleBackColor = true;
+            this.btnDeleteStudent.Click += new System.EventHandler(this.btnDeleteStudent_Click);
             // 
             // btnImportAttendance
             // 
@@ -203,6 +223,7 @@
             this.btnImportAttendance.Size = new System.Drawing.Size(145, 138);
             this.btnImportAttendance.TabIndex = 15;
             this.btnImportAttendance.UseVisualStyleBackColor = true;
+            this.btnImportAttendance.Click += new System.EventHandler(this.btnImportAttendance_Click);
             // 
             // button1
             // 
@@ -357,9 +378,9 @@
             // 
             // pnlMain
             // 
-            this.pnlMain.Controls.Add(this.pnlAddStudent);
-            this.pnlMain.Controls.Add(this.pnlViewStudents);
+            this.pnlMain.Controls.Add(this.pnlViewAllStudents);
             this.pnlMain.Controls.Add(this.pnlDeleteStudent);
+            this.pnlMain.Controls.Add(this.pnlAddStudent);
             this.pnlMain.Controls.Add(this.pnlViewAttendance);
             this.pnlMain.Controls.Add(this.pnlDeleteAttendance);
             this.pnlMain.Controls.Add(this.pnlMarkAttendance);
@@ -376,6 +397,202 @@
             this.pnlMain.Name = "pnlMain";
             this.pnlMain.Size = new System.Drawing.Size(909, 376);
             this.pnlMain.TabIndex = 13;
+            // 
+            // pnlViewAllStudents
+            // 
+            this.pnlViewAllStudents.Controls.Add(this.pictureBox5);
+            this.pnlViewAllStudents.Controls.Add(this.pictureBox4);
+            this.pnlViewAllStudents.Controls.Add(this.pictureBox3);
+            this.pnlViewAllStudents.Controls.Add(this.name3);
+            this.pnlViewAllStudents.Controls.Add(this.name2);
+            this.pnlViewAllStudents.Controls.Add(this.name1);
+            this.pnlViewAllStudents.Controls.Add(this.enroll3);
+            this.pnlViewAllStudents.Controls.Add(this.enroll2);
+            this.pnlViewAllStudents.Controls.Add(this.enroll1);
+            this.pnlViewAllStudents.Location = new System.Drawing.Point(0, 3);
+            this.pnlViewAllStudents.Name = "pnlViewAllStudents";
+            this.pnlViewAllStudents.Size = new System.Drawing.Size(899, 416);
+            this.pnlViewAllStudents.TabIndex = 23;
+            this.pnlViewAllStudents.Visible = false;
+            // 
+            // pictureBox5
+            // 
+            this.pictureBox5.Location = new System.Drawing.Point(584, 248);
+            this.pictureBox5.Name = "pictureBox5";
+            this.pictureBox5.Size = new System.Drawing.Size(179, 105);
+            this.pictureBox5.TabIndex = 12;
+            this.pictureBox5.TabStop = false;
+            // 
+            // pictureBox4
+            // 
+            this.pictureBox4.Location = new System.Drawing.Point(584, 130);
+            this.pictureBox4.Name = "pictureBox4";
+            this.pictureBox4.Size = new System.Drawing.Size(179, 105);
+            this.pictureBox4.TabIndex = 11;
+            this.pictureBox4.TabStop = false;
+            // 
+            // pictureBox3
+            // 
+            this.pictureBox3.Location = new System.Drawing.Point(584, 12);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(179, 105);
+            this.pictureBox3.TabIndex = 10;
+            this.pictureBox3.TabStop = false;
+            // 
+            // name3
+            // 
+            this.name3.AutoSize = true;
+            this.name3.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.name3.Location = new System.Drawing.Point(334, 276);
+            this.name3.Name = "name3";
+            this.name3.Size = new System.Drawing.Size(77, 24);
+            this.name3.TabIndex = 7;
+            this.name3.Text = "label17";
+            // 
+            // name2
+            // 
+            this.name2.AutoSize = true;
+            this.name2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.name2.Location = new System.Drawing.Point(334, 164);
+            this.name2.Name = "name2";
+            this.name2.Size = new System.Drawing.Size(77, 24);
+            this.name2.TabIndex = 6;
+            this.name2.Text = "label16";
+            // 
+            // name1
+            // 
+            this.name1.AutoSize = true;
+            this.name1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.name1.Location = new System.Drawing.Point(334, 50);
+            this.name1.Name = "name1";
+            this.name1.Size = new System.Drawing.Size(77, 24);
+            this.name1.TabIndex = 5;
+            this.name1.Text = "label15";
+            // 
+            // enroll3
+            // 
+            this.enroll3.AutoSize = true;
+            this.enroll3.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.enroll3.Location = new System.Drawing.Point(72, 276);
+            this.enroll3.Name = "enroll3";
+            this.enroll3.Size = new System.Drawing.Size(77, 24);
+            this.enroll3.TabIndex = 2;
+            this.enroll3.Text = "label12";
+            // 
+            // enroll2
+            // 
+            this.enroll2.AutoSize = true;
+            this.enroll2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.enroll2.Location = new System.Drawing.Point(72, 164);
+            this.enroll2.Name = "enroll2";
+            this.enroll2.Size = new System.Drawing.Size(77, 24);
+            this.enroll2.TabIndex = 1;
+            this.enroll2.Text = "label11";
+            // 
+            // enroll1
+            // 
+            this.enroll1.AutoSize = true;
+            this.enroll1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.enroll1.Location = new System.Drawing.Point(72, 50);
+            this.enroll1.Name = "enroll1";
+            this.enroll1.Size = new System.Drawing.Size(66, 24);
+            this.enroll1.TabIndex = 0;
+            this.enroll1.Text = "label9";
+            // 
+            // pnlDeleteStudent
+            // 
+            this.pnlDeleteStudent.Controls.Add(this.pbDelStu);
+            this.pnlDeleteStudent.Controls.Add(this.lblDelStudentNAme);
+            this.pnlDeleteStudent.Controls.Add(this.lblDelStudent);
+            this.pnlDeleteStudent.Controls.Add(this.label10);
+            this.pnlDeleteStudent.Controls.Add(this.label8);
+            this.pnlDeleteStudent.Controls.Add(this.txtboxDelStuSearch);
+            this.pnlDeleteStudent.Controls.Add(this.btnDelInPnlDelstu);
+            this.pnlDeleteStudent.Controls.Add(this.pnlSearchinPnlDel);
+            this.pnlDeleteStudent.Location = new System.Drawing.Point(299, 217);
+            this.pnlDeleteStudent.Name = "pnlDeleteStudent";
+            this.pnlDeleteStudent.Size = new System.Drawing.Size(75, 140);
+            this.pnlDeleteStudent.TabIndex = 22;
+            this.pnlDeleteStudent.Visible = false;
+            this.pnlDeleteStudent.Paint += new System.Windows.Forms.PaintEventHandler(this.pnlDeleteStudent_Paint);
+            // 
+            // pbDelStu
+            // 
+            this.pbDelStu.Location = new System.Drawing.Point(640, 22);
+            this.pbDelStu.Name = "pbDelStu";
+            this.pbDelStu.Size = new System.Drawing.Size(222, 141);
+            this.pbDelStu.TabIndex = 31;
+            this.pbDelStu.TabStop = false;
+            // 
+            // lblDelStudentNAme
+            // 
+            this.lblDelStudentNAme.AutoSize = true;
+            this.lblDelStudentNAme.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblDelStudentNAme.Location = new System.Drawing.Point(487, 76);
+            this.lblDelStudentNAme.Name = "lblDelStudentNAme";
+            this.lblDelStudentNAme.Size = new System.Drawing.Size(69, 20);
+            this.lblDelStudentNAme.TabIndex = 30;
+            this.lblDelStudentNAme.Text = "...............";
+            // 
+            // lblDelStudent
+            // 
+            this.lblDelStudent.AutoSize = true;
+            this.lblDelStudent.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblDelStudent.Location = new System.Drawing.Point(487, 31);
+            this.lblDelStudent.Name = "lblDelStudent";
+            this.lblDelStudent.Size = new System.Drawing.Size(77, 20);
+            this.lblDelStudent.TabIndex = 29;
+            this.lblDelStudent.Text = ".................";
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.Location = new System.Drawing.Point(36, 27);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(144, 20);
+            this.label10.TabIndex = 28;
+            this.label10.Text = "Enter Enrollment";
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.Location = new System.Drawing.Point(36, 80);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(85, 20);
+            this.label8.TabIndex = 26;
+            this.label8.Text = "Enrollment";
+            this.label8.Click += new System.EventHandler(this.label8_Click);
+            // 
+            // txtboxDelStuSearch
+            // 
+            this.txtboxDelStuSearch.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtboxDelStuSearch.Location = new System.Drawing.Point(146, 74);
+            this.txtboxDelStuSearch.Name = "txtboxDelStuSearch";
+            this.txtboxDelStuSearch.Size = new System.Drawing.Size(185, 26);
+            this.txtboxDelStuSearch.TabIndex = 24;
+            // 
+            // btnDelInPnlDelstu
+            // 
+            this.btnDelInPnlDelstu.Enabled = false;
+            this.btnDelInPnlDelstu.Location = new System.Drawing.Point(271, 161);
+            this.btnDelInPnlDelstu.Name = "btnDelInPnlDelstu";
+            this.btnDelInPnlDelstu.Size = new System.Drawing.Size(108, 39);
+            this.btnDelInPnlDelstu.TabIndex = 5;
+            this.btnDelInPnlDelstu.Text = "Delete";
+            this.btnDelInPnlDelstu.UseVisualStyleBackColor = true;
+            this.btnDelInPnlDelstu.Click += new System.EventHandler(this.button6_Click);
+            // 
+            // pnlSearchinPnlDel
+            // 
+            this.pnlSearchinPnlDel.Location = new System.Drawing.Point(130, 161);
+            this.pnlSearchinPnlDel.Name = "pnlSearchinPnlDel";
+            this.pnlSearchinPnlDel.Size = new System.Drawing.Size(108, 39);
+            this.pnlSearchinPnlDel.TabIndex = 4;
+            this.pnlSearchinPnlDel.Text = "Search";
+            this.pnlSearchinPnlDel.UseVisualStyleBackColor = true;
+            this.pnlSearchinPnlDel.Click += new System.EventHandler(this.button10_Click);
             // 
             // pnlAddStudent
             // 
@@ -395,6 +612,33 @@
             this.pnlAddStudent.TabIndex = 21;
             this.pnlAddStudent.Visible = false;
             this.pnlAddStudent.Paint += new System.Windows.Forms.PaintEventHandler(this.pnlViewAttendancew_Paint);
+            // 
+            // imageBoxFinal
+            // 
+            this.imageBoxFinal.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.imageBoxFinal.Location = new System.Drawing.Point(396, 247);
+            this.imageBoxFinal.Name = "imageBoxFinal";
+            this.imageBoxFinal.Size = new System.Drawing.Size(101, 101);
+            this.imageBoxFinal.TabIndex = 20;
+            this.imageBoxFinal.TabStop = false;
+            // 
+            // txtBoxEnrollment
+            // 
+            this.txtBoxEnrollment.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtBoxEnrollment.Location = new System.Drawing.Point(199, 189);
+            this.txtBoxEnrollment.Name = "txtBoxEnrollment";
+            this.txtBoxEnrollment.Size = new System.Drawing.Size(145, 26);
+            this.txtBoxEnrollment.TabIndex = 19;
+            // 
+            // txtBoxLBL
+            // 
+            this.txtBoxLBL.AutoSize = true;
+            this.txtBoxLBL.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtBoxLBL.Location = new System.Drawing.Point(93, 195);
+            this.txtBoxLBL.Name = "txtBoxLBL";
+            this.txtBoxLBL.Size = new System.Drawing.Size(100, 20);
+            this.txtBoxLBL.TabIndex = 18;
+            this.txtBoxLBL.Text = "Enrollment:";
             // 
             // label7
             // 
@@ -462,60 +706,6 @@
             this.button9.Text = "Scan";
             this.button9.UseVisualStyleBackColor = true;
             this.button9.Click += new System.EventHandler(this.button9_Click_1);
-            // 
-            // pnlViewStudents
-            // 
-            this.pnlViewStudents.Controls.Add(this.listBox2);
-            this.pnlViewStudents.Location = new System.Drawing.Point(493, 258);
-            this.pnlViewStudents.Name = "pnlViewStudents";
-            this.pnlViewStudents.Size = new System.Drawing.Size(119, 89);
-            this.pnlViewStudents.TabIndex = 23;
-            this.pnlViewStudents.Visible = false;
-            // 
-            // listBox2
-            // 
-            this.listBox2.FormattingEnabled = true;
-            this.listBox2.Location = new System.Drawing.Point(314, 3);
-            this.listBox2.Name = "listBox2";
-            this.listBox2.Size = new System.Drawing.Size(280, 355);
-            this.listBox2.TabIndex = 1;
-            // 
-            // pnlDeleteStudent
-            // 
-            this.pnlDeleteStudent.Controls.Add(this.button6);
-            this.pnlDeleteStudent.Controls.Add(this.button10);
-            this.pnlDeleteStudent.Controls.Add(this.pictureBox4);
-            this.pnlDeleteStudent.Location = new System.Drawing.Point(304, 242);
-            this.pnlDeleteStudent.Name = "pnlDeleteStudent";
-            this.pnlDeleteStudent.Size = new System.Drawing.Size(106, 115);
-            this.pnlDeleteStudent.TabIndex = 22;
-            this.pnlDeleteStudent.Visible = false;
-            // 
-            // button6
-            // 
-            this.button6.Location = new System.Drawing.Point(126, 180);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(170, 64);
-            this.button6.TabIndex = 5;
-            this.button6.Text = "Delete";
-            this.button6.UseVisualStyleBackColor = true;
-            // 
-            // button10
-            // 
-            this.button10.Location = new System.Drawing.Point(126, 65);
-            this.button10.Name = "button10";
-            this.button10.Size = new System.Drawing.Size(170, 64);
-            this.button10.TabIndex = 4;
-            this.button10.Text = "Scan";
-            this.button10.UseVisualStyleBackColor = true;
-            // 
-            // pictureBox4
-            // 
-            this.pictureBox4.Location = new System.Drawing.Point(429, 10);
-            this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(348, 345);
-            this.pictureBox4.TabIndex = 3;
-            this.pictureBox4.TabStop = false;
             // 
             // btnStart
             // 
@@ -705,39 +895,36 @@
             this.imageList2.ImageSize = new System.Drawing.Size(16, 16);
             this.imageList2.TransparentColor = System.Drawing.Color.Transparent;
             // 
-            // txtBoxEnrollment
+            // button6
             // 
-            this.txtBoxEnrollment.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtBoxEnrollment.Location = new System.Drawing.Point(199, 189);
-            this.txtBoxEnrollment.Name = "txtBoxEnrollment";
-            this.txtBoxEnrollment.Size = new System.Drawing.Size(145, 26);
-            this.txtBoxEnrollment.TabIndex = 19;
+            this.button6.Location = new System.Drawing.Point(269, 380);
+            this.button6.Name = "button6";
+            this.button6.Size = new System.Drawing.Size(75, 23);
+            this.button6.TabIndex = 13;
+            this.button6.Text = "button6";
+            this.button6.UseVisualStyleBackColor = true;
+            this.button6.Click += new System.EventHandler(this.button6_Click_1);
             // 
-            // txtBoxLBL
+            // button10
             // 
-            this.txtBoxLBL.AutoSize = true;
-            this.txtBoxLBL.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtBoxLBL.Location = new System.Drawing.Point(93, 195);
-            this.txtBoxLBL.Name = "txtBoxLBL";
-            this.txtBoxLBL.Size = new System.Drawing.Size(100, 20);
-            this.txtBoxLBL.TabIndex = 18;
-            this.txtBoxLBL.Text = "Enrollment:";
-            // 
-            // imageBoxFinal
-            // 
-            this.imageBoxFinal.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.imageBoxFinal.Location = new System.Drawing.Point(396, 247);
-            this.imageBoxFinal.Name = "imageBoxFinal";
-            this.imageBoxFinal.Size = new System.Drawing.Size(101, 101);
-            this.imageBoxFinal.TabIndex = 20;
-            this.imageBoxFinal.TabStop = false;
+            this.button10.Location = new System.Drawing.Point(379, 379);
+            this.button10.Name = "button10";
+            this.button10.Size = new System.Drawing.Size(75, 23);
+            this.button10.TabIndex = 14;
+            this.button10.Text = "button10";
+            this.button10.UseVisualStyleBackColor = true;
+            this.button10.Click += new System.EventHandler(this.button10_Click_1);
             // 
             // FaceRecognitionSystem
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoSize = true;
+            this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.BackColor = System.Drawing.Color.Snow;
             this.ClientSize = new System.Drawing.Size(908, 423);
+            this.Controls.Add(this.button6);
+            this.Controls.Add(this.button10);
             this.Controls.Add(this.pnlMain);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.btnExit);
@@ -761,17 +948,22 @@
             this.pnlViewAttendance.ResumeLayout(false);
             this.pnlMain.ResumeLayout(false);
             this.pnlMain.PerformLayout();
+            this.pnlViewAllStudents.ResumeLayout(false);
+            this.pnlViewAllStudents.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
+            this.pnlDeleteStudent.ResumeLayout(false);
+            this.pnlDeleteStudent.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbDelStu)).EndInit();
             this.pnlAddStudent.ResumeLayout(false);
             this.pnlAddStudent.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.imageBoxFinal)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.imageBox1)).EndInit();
-            this.pnlViewStudents.ResumeLayout(false);
-            this.pnlDeleteStudent.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.IBOutput)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.cameraBox)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.imageBoxFinal)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -825,16 +1017,31 @@
         private System.Windows.Forms.Button btnSaveFace;
         private System.Windows.Forms.Button button9;
         private System.Windows.Forms.Panel pnlDeleteStudent;
-        private System.Windows.Forms.Button button6;
-        private System.Windows.Forms.Button button10;
-        private System.Windows.Forms.PictureBox pictureBox4;
-        private System.Windows.Forms.Panel pnlViewStudents;
-        private System.Windows.Forms.ListBox listBox2;
+        private System.Windows.Forms.Button btnDelInPnlDelstu;
+        private System.Windows.Forms.Button pnlSearchinPnlDel;
         private System.Windows.Forms.ImageList imageList2;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.TextBox txtBoxEnrollment;
         private System.Windows.Forms.Label txtBoxLBL;
         public Emgu.CV.UI.ImageBox imageBoxFinal;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.TextBox txtboxDelStuSearch;
+        private System.Windows.Forms.Label lblDelStudentNAme;
+        private System.Windows.Forms.Label lblDelStudent;
+        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.PictureBox pbDelStu;
+        private System.Windows.Forms.Panel pnlViewAllStudents;
+        private System.Windows.Forms.PictureBox pictureBox5;
+        private System.Windows.Forms.PictureBox pictureBox4;
+        private System.Windows.Forms.PictureBox pictureBox3;
+        private System.Windows.Forms.Label name3;
+        private System.Windows.Forms.Label name2;
+        private System.Windows.Forms.Label name1;
+        private System.Windows.Forms.Label enroll3;
+        private System.Windows.Forms.Label enroll2;
+        private System.Windows.Forms.Label enroll1;
+        private System.Windows.Forms.Button button6;
+        private System.Windows.Forms.Button button10;
     }
 }
 

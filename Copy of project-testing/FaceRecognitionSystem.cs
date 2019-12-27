@@ -18,6 +18,11 @@ namespace KSLR_R_FaceRecognitionsSystem
 {
     public partial class FaceRecognitionSystem : Form
     {
+        List<string> ListEnroll = new List<string>();
+        List<string> ListName = new List<string>();
+        List<string> ListPath = new List<string>();
+        int showdata = 0;
+        int i = 0;
         //Variables 
         MCvFont font = new MCvFont(FONT.CV_FONT_HERSHEY_TRIPLEX, 0.6d, 0.6d);
 
@@ -29,7 +34,6 @@ namespace KSLR_R_FaceRecognitionsSystem
 
         //Images List if Stored
         Image<Bgr, Byte> Frame;
-
         Image<Gray, byte> result;
         Image<Rgb, byte> colorResult;
         Image<Gray, byte> TrainedFace = null;
@@ -235,6 +239,202 @@ namespace KSLR_R_FaceRecognitionsSystem
         private void FaceRecognitionSystem_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void btnDeleteStudent_Click(object sender, EventArgs e)
+        {
+            pnlDeleteStudent.Show();
+            pnlDeleteStudent.Location = new Point(0, 0);
+            pnlDeleteStudent.Size = new Size(924, 462);
+        }
+
+        private void label8_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pnlDeleteStudent_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void button10_Click(object sender, EventArgs e)
+        {
+            if(txtboxDelStuSearch.Text=="")
+            {
+                MessageBox.Show("Please enter enrollment");
+            }
+            else
+            {
+                Connection connObj = new Connection();
+                SqlConnection connectMe = connObj.conn();
+                SqlCommand cmd = connectMe.CreateCommand();
+                cmd.CommandType = CommandType.Text;
+                SqlDataReader Reader = null;
+                try
+                {
+
+                    cmd.CommandText = "Select * from Students where ID=" + txtboxDelStuSearch.Text;
+                    Reader = cmd.ExecuteReader();
+                    if (Reader.HasRows)
+                    {
+                        while (Reader.Read())
+                        {
+                            lblDelStudent.Text = (Reader["ID"].ToString());
+                            lblDelStudentNAme.Text = (Reader["Name"].ToString());
+                            pbDelStu.Image = Image.FromFile((Reader["Image"]).ToString());
+                        }
+                        btnDelInPnlDelstu.Enabled = true;
+                    }
+                    else
+                    {
+                       MessageBox.Show("No data found");
+                    }
+                 
+
+
+
+
+                }
+                catch (SqlException exp)
+                {
+                    MessageBox.Show(exp.Message);
+                }
+                finally
+                {
+                    connectMe.Close();
+                }
+            }
+           
+          
+        }
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+            Connection connObj = new Connection();
+            SqlConnection connectMe = connObj.conn();
+            SqlCommand cmd = connectMe.CreateCommand();
+            cmd.CommandType = CommandType.Text;
+            cmd.CommandText = "delete from Students where ID=" + txtboxDelStuSearch.Text;
+            cmd.ExecuteNonQuery();
+            connectMe.Close();
+            MessageBox.Show("Student Deleted Successfully");
+        }
+
+        private void btnViewStudents_Click(object sender, EventArgs e)
+        {
+            pnlViewAllStudents.Show();
+            pnlViewAllStudents.Location = new Point(0, 0);
+            pnlViewAllStudents.Size = new Size(924, 462);
+            set();
+        }
+        public void set()
+        {
+            //if (txtboxDelStuSearch.Text == "")
+            //{
+            //    MessageBox.Show("Please enter enrollment");
+            //}
+            //else
+            //{
+            
+                Connection connObj = new Connection();
+                SqlConnection connectMe = connObj.conn();
+                SqlCommand cmd = connectMe.CreateCommand();
+                cmd.CommandType = CommandType.Text;
+                SqlDataReader Reader = null;
+                try
+                {
+
+                cmd.CommandText = "Select * from Students";
+                    Reader = cmd.ExecuteReader();
+                    if (Reader.HasRows)
+                    { 
+                    while (Reader.Read())
+                    {
+                        //    enroll1.Text = (Reader["ID"].ToString());
+                        //    name1.Text = (Reader["Name"].ToString());
+                        //    pictureBox3.Image = Image.FromFile((Reader["Image"]).ToString());
+                        //enroll2.Text = (Reader["ID"].ToString());
+                        //name2.Text = (Reader["Name"].ToString());
+                        //pictureBox4.Image = Image.FromFile((Reader["Image"]).ToString());
+
+                        //enroll3.Text = (Reader["ID"].ToString());
+                        //name3.Text = (Reader["Name"].ToString());
+                        //pictureBox5.Image = Image.FromFile((Reader["Image"]).ToString());
+                        //MessageBox.Show((Reader["ID"].ToString()));
+                        ListEnroll.Add((Reader["ID"].ToString()));
+                        ListName.Add((Reader["Name"].ToString()));
+                        ListPath.Add((Reader["Image"]).ToString());
+                    }  
+                    btnDelInPnlDelstu.Enabled = true;
+                    }
+                    else
+                    {
+                        MessageBox.Show("No data found");
+                    }
+               
+                }
+                catch (SqlException exp)
+                {
+                    MessageBox.Show(exp.Message);
+                }
+                finally
+                {
+                    connectMe.Close();
+                }
+            showData(i);
+           //}
+        }
+        public void showData(int c)
+        {
+            while (i < ListEnroll.Count)
+            {
+                if (i < ListEnroll.Count)
+                {
+                    enroll1.Text = ListEnroll[i];
+                    name1.Text = ListName[i];
+                    pictureBox3.Image = Image.FromFile(ListPath[i]);
+                    i++;
+                }
+
+                if (i < ListEnroll.Count)
+                {
+                    enroll2.Text = ListEnroll[i];
+                    name2.Text = ListName[i];
+                    pictureBox4.Image = Image.FromFile(ListPath[i]);
+                    i++;
+                }
+
+                if (i < ListEnroll.Count)
+                {
+                    enroll3.Text = ListEnroll[i];
+                    name3.Text = ListName[i];
+                    pictureBox5.Image = Image.FromFile(ListPath[i]);
+                    i++;
+                }
+                if (i%3==0)
+                {
+                    break;
+                }
+
+            }
+
+
+        }
+
+        private void button10_Click_1(object sender, EventArgs e)
+        {
+            showData(i++);
+        }
+
+        private void button6_Click_1(object sender, EventArgs e)
+        {
+            showData(i - 3);
+        }
+
+        private void btnImportAttendance_Click(object sender, EventArgs e)
+        {
+           
         }
 
         private void button9_Click_1(object sender, EventArgs e)
