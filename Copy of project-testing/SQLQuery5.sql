@@ -1,0 +1,1 @@
+﻿Select * from Students where ID='01-131172-043';

@@ -80,18 +80,19 @@ namespace KSLR_R_FaceRecognitionsSystem
 
         private void Start_Click(object sender, EventArgs e)
         {
+
+            startScan();
+            //txName.Focus();
+        }
+        public void startScan()
+        {
             camera = new Capture();
             camera.QueryFrame();
-
             Application.Idle += new EventHandler(FrameProcedure);
-
             btnStart.Enabled = false;
-
             btnSave.Enabled = true;
             btnOpen.Enabled = true;
             btnRestart.Enabled = true;
-            txName.Focus();
-
         }
         private void Open_Click(object sender, EventArgs e)
         {
@@ -116,6 +117,11 @@ namespace KSLR_R_FaceRecognitionsSystem
 
         private void Save_Click(object sender, EventArgs e)
         {
+            saveFace();
+
+        }
+        public void saveFace()
+        {
             if (txName.Text == "" || txName.Text.Length < 2 || txName.Text == string.Empty)
             {
                 MessageBox.Show("Please enter name of person");
@@ -131,7 +137,7 @@ namespace KSLR_R_FaceRecognitionsSystem
                 {
 
                     TrainedFace = Frame.Copy(f.rect).Convert<Gray, Byte>();
-                    
+
                     break;
                 }
 
@@ -154,9 +160,39 @@ namespace KSLR_R_FaceRecognitionsSystem
                 txName.Focus();
 
             }
-
         }
+        public void FrameForMark(object sender, EventArgs e)
+        {
+            Frame = camera.QueryFrame().Resize(320, 240, INTER.CV_INTER_CUBIC);
+            grayFace = Frame.Convert<Gray, Byte>();
 
+            MCvAvgComp[][] faceDetectedShow = grayFace.DetectHaarCascade(faceDetected, 1.2, 10,
+                HAAR_DETECTION_TYPE.DO_CANNY_PRUNING, new Size(40, 40));
+
+            foreach (MCvAvgComp f in faceDetectedShow[0])
+            {
+               
+                result = Frame.Copy(f.rect).Convert<Gray, Byte>().Resize(100, 100, INTER.CV_INTER_CUBIC);
+                colorResult = Frame.Copy(f.rect).Convert<Rgb, Byte>().Resize(100, 100, INTER.CV_INTER_CUBIC);
+                Frame.Draw(f.rect, new Bgr(Color.Green), 3);
+
+                if (trainingImages.ToArray().Length != 0)
+                {
+                    MCvTermCriteria termCriterias = new MCvTermCriteria(Count, 0.001);
+                    EigenObjectRecognizer recognizer =
+                        new EigenObjectRecognizer(trainingImages.ToArray(),
+                        labels.ToArray(), 3000,
+                        ref termCriterias);
+
+                    name = recognizer.Recognize(result);
+                    Frame.Draw(name, ref font, new Point(f.rect.X - 2, f.rect.Y - 2), new Bgr(Color.Red));
+                    lblnameofstudent.Text = name;
+                }
+            }
+            imgBoxMarkAttendance.Image = Frame;
+            lblName.Text = names;
+            names = "";
+        }
         private void FrameProcedure(object sender, EventArgs e)
         {
             users.Add("");
@@ -195,19 +231,16 @@ namespace KSLR_R_FaceRecognitionsSystem
             //Set the number of faces detected on the scene
             lblCountAllFaces.Text = faceDetectedShow[0].Length.ToString();
             users.Add("");
-
-
             t = 0;
-
             //Names concatenation of persons recognized
             for (int nnn = 0; nnn < faceDetectedShow[0].Length; nnn++)
             {
                 names = names + users[nnn] + ", ";
             }
-
             //Show the faces procesed and recognized
             cameraBox.Image = Frame;
             imageBox1.Image = Frame;
+            imgBoxMarkAttendance.Image = Frame;
             lblName.Text = names;
             names = "";
             users.Clear();
@@ -215,6 +248,7 @@ namespace KSLR_R_FaceRecognitionsSystem
 
         private void btnAddStudent_Click(object sender, EventArgs e)
         {
+           
             pnlAddStudent.Show();
             pnlAddStudent.Location = new Point(0, 0);
             pnlAddStudent.Size = new Size(924, 462);
@@ -223,7 +257,9 @@ namespace KSLR_R_FaceRecognitionsSystem
 
         private void btnMarkAttendance_Click(object sender, EventArgs e)
         {
-
+            pnlMarkAttendance.Show();
+            pnlMarkAttendance.Location = new Point(0, 0);
+            pnlMarkAttendance.Size = new Size(924, 462);
         }
 
         private void pnlViewAttendancew_Paint(object sender, PaintEventArgs e)
@@ -321,6 +357,12 @@ namespace KSLR_R_FaceRecognitionsSystem
             pnlViewAllStudents.Show();
             pnlViewAllStudents.Location = new Point(0, 0);
             pnlViewAllStudents.Size = new Size(924, 462);
+            if (i==ListEnroll.Count)
+            {
+                btnNext.Enabled = false;
+                btnBack.Enabled = false;
+            }
+
             set();
         }
         public void set()
@@ -463,6 +505,234 @@ namespace KSLR_R_FaceRecognitionsSystem
 
         }
 
+        private void pnlViewAllStudents_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            pnlMarkAttendance.Hide();
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            button5.Enabled = false;
+            camera = new Capture();
+            camera.QueryFrame();
+            Application.Idle += new EventHandler(FrameForMark);
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+          
+                Connection connObj = new Connection();
+                SqlConnection connectMe = connObj.conn();
+                SqlCommand cmd = connectMe.CreateCommand();
+                cmd.CommandType = CommandType.Text;
+                SqlDataReader Reader = null;
+                string id = "5", name = "5", img="5";
+            try
+            {
+                cmd.CommandText = "Select * from Students where ID="+Convert.ToString( lblnameofstudent.Text) ;
+                Reader = cmd.ExecuteReader();
+                if (Reader.HasRows)
+                {
+                    //MessageBox.Show("Has rows");
+                    while (Reader.Read())
+                    {
+                        //MessageBox.Show("Inside");
+                        //MessageBox.Show("HI");
+                        id = (Reader["ID"].ToString());
+                        name = (Reader["Name"].ToString());
+                        img=(Reader["Image"].ToString());
+                    }
+                }
+                //MessageBox.Show(img);
+                cmd.Dispose();
+                connectMe.Close();
+                try
+                {
+                    string sql2;
+                    
+                    Connection cnn = new Connection();
+                    SqlConnection cnt = cnn.conn();
+                    SqlDataAdapter adapter = new SqlDataAdapter();
+                    SqlCommand command;
+                    //sql2="INSERT INTO [dbo].[Attendance]([Name], [enroll],[Image]) SELECT ([ID], [Name] FROM   Students WHERE([ID] = 'lblnameofstudent.Text' )";
+                    sql2 = "INSERT INTO[dbo].[Attendance] ([Enrollment],[Name],[Image])  VALUES('" + id + "','" + name + "','" + img+      "');";
+                    command = new SqlCommand(sql2, cnt);
+                    adapter.InsertCommand = new SqlCommand(sql2, cnt);
+                    adapter.InsertCommand.ExecuteNonQuery();
+                    command.Dispose();
+                    MessageBox.Show("Added to Database");
+                    cnt.Close();
+                }
+                catch (Exception v)
+                {
+                    MessageBox.Show("Already Marked Present");
+                    MessageBox.Show(v.Message);
+                }
+               
+                
+            }
+            catch (MissingPrimaryKeyException e1)
+            {
+                MessageBox.Show("Primary key is missing");
+                MessageBox.Show(e1.Message);
+            }
+            catch (Exception ee)
+            {
+                MessageBox.Show(ee.Message);
+            }
+    }
+
+        private void pnlMarkAttendance_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void btnDeleteAttendance_Click(object sender, EventArgs e)
+        {
+            pnlDeleteAttendance.Show();
+            pnlDeleteAttendance.Location = new Point(0, 0);
+            pnlDeleteAttendance.Size = new Size(924, 462);
+
+        }
+
+        private void pnlDeleteAttendance_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void lblDelEnroll_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnViewDelAttendance_Click(object sender, EventArgs e)
+        {
+            pnlDelView.Show();
+            pnlDelView.Location = new Point(379, 29);
+            pnlDelView.Size = new Size(498, 294);
+            if (textBoxDeleteEnrollment.Text == "")
+            {
+                MessageBox.Show("Please enter enrollment");
+            }
+            else
+            {
+                Connection connObj = new Connection();
+                SqlConnection connectMe = connObj.conn();
+                SqlCommand cmd = connectMe.CreateCommand();
+                cmd.CommandType = CommandType.Text;
+                SqlDataReader Reader = null;
+                try
+                {
+
+                    cmd.CommandText = "Select * from Attendance where Enrollment="+textBoxDeleteEnrollment.Text;
+
+                    Reader = cmd.ExecuteReader();
+                    if (Reader.HasRows)
+                    {
+                        while (Reader.Read())
+                        {
+                            lblDelEnroll.Text = (Reader["ID"].ToString());
+                            lblDelName.Text = (Reader["Name"].ToString());
+                            pbDelAtt.Image = Image.FromFile((Reader["Image"]).ToString());
+                        }
+                    }
+                    else
+                    {
+                        MessageBox.Show("No data found");
+                        textBoxDeleteEnrollment.Text = "";
+                    }
+                }
+                catch (SqlException exp)
+                {
+                    MessageBox.Show(exp.Message);
+                }
+                finally
+                {
+                    connectMe.Close();
+                }
+            }
+        }
+
+        private void groupBox1_Enter(object sender, EventArgs e)
+        {
+
+        }
+
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+        }
+
+        private void pnlMain_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void btnDelAttendance_Click(object sender, EventArgs e)
+        {
+            Connection connObj = new Connection();
+            SqlConnection connectMe = connObj.conn();
+            SqlCommand cmd = connectMe.CreateCommand();
+            cmd.CommandType = CommandType.Text;
+            cmd.CommandText = "Delete from Attendance where ID=" + textBoxDeleteEnrollment.Text;
+            cmd.ExecuteNonQuery();
+            connectMe.Close();
+            MessageBox.Show("Student Deleted Successfully");
+        }
+
+        private void button6_Click_2(object sender, EventArgs e)
+        {
+            pnlViewAttendance.Hide();
+        }
+
+        private void pnlViewAttendance_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void btnViewAttendance_Click(object sender, EventArgs e)
+        {
+            pnlViewAttendance.Show();
+            pnlViewAttendance.Location = new Point(0, 0);
+            pnlViewAttendance.Size = new Size(924, 462);
+            Connection connObj = new Connection();
+            SqlConnection connectMe = connObj.conn();
+            SqlCommand cmd = connectMe.CreateCommand();
+            cmd.CommandType = CommandType.Text;
+            cmd.CommandText = "Select ID,Enrollment,Name from Attendance";
+            cmd.ExecuteNonQuery();
+            DataTable dt = new DataTable();
+            SqlDataAdapter da = new SqlDataAdapter(cmd);
+            da.Fill(dt);
+            dataGridView1.DataSource = dt;
+            connectMe.Close();
+        }
+
+        private void btnBckPnlMA_Click(object sender, EventArgs e)
+        {
+            button9.Enabled = true;
+            pnlAddStudent.Hide();
+        }
+
+        private void btnbcVA_Click(object sender, EventArgs e)
+        {
+            pnlDeleteAttendance.Hide();
+        }
+
+        private void btnHome_Click(object sender, EventArgs e)
+        {
+            pnlViewAllStudents.Hide();
+        }
+
+        private void btnhm_Click(object sender, EventArgs e)
+        {
+            pnlDeleteStudent.Hide();
+        }
+
         private void btnImportAttendance_Click(object sender, EventArgs e)
         {
            
@@ -470,6 +740,7 @@ namespace KSLR_R_FaceRecognitionsSystem
 
         private void button9_Click_1(object sender, EventArgs e)
         {
+            button9.Enabled = false;
             camera = new Capture();
             camera.QueryFrame();
             Application.Idle += new EventHandler(FrameProcedure);
@@ -478,9 +749,9 @@ namespace KSLR_R_FaceRecognitionsSystem
         private void btnSaveFace_Click(object sender, EventArgs e)
         {
 
-            if (ttxtBoxName.Text == "" || ttxtBoxName.Text.Length < 2 || ttxtBoxName.Text == string.Empty)
+            if (txtBoxEnrollment.Text == "" || txtBoxEnrollment.Text.Length < 2 || txtBoxEnrollment.Text == string.Empty)
             {
-                MessageBox.Show("Please enter name of person");
+                MessageBox.Show("Please enter Enrollment");
             }
             else
             {
@@ -503,7 +774,7 @@ namespace KSLR_R_FaceRecognitionsSystem
                 trainingImages.Add(TrainedFace);
                 //IBOutput.Image = TrainedFace;
 
-                labels.Add(ttxtBoxName.Text);
+                labels.Add(txtBoxEnrollment.Text);
                 imageBoxFinal.Image= resImage;
                 File.WriteAllText(Application.StartupPath + "/Faces/Faces.txt", trainingImages.ToArray().Length.ToString() + ",");
 
@@ -514,8 +785,8 @@ namespace KSLR_R_FaceRecognitionsSystem
                 }
 
                 MessageBox.Show("Face Stored.");
-                
-                ttxtBoxName.Focus();
+
+                txtBoxEnrollment.Focus();
                 addToDatabase();
             }
             
@@ -531,10 +802,8 @@ namespace KSLR_R_FaceRecognitionsSystem
                 string sql;
                 string imageFolder = (Application.StartupPath + @"\Images\");
                 string imageName = txtBoxEnrollment.Text + ".jpg";
-                string finalImage = Path.Combine(imageFolder, imageName);
-                //Image i = imageBoxFinal.Image;
+                string finalImage = Path.Combine(imageFolder, imageName);          
                 resImage.Save(finalImage);
-                //string output = "";
                 sql = "INSERT INTO[dbo].[Students] ([ID], [Name],[Image]) VALUES('" + this.txtBoxEnrollment.Text + "','" + this.ttxtBoxName.Text + "','" + finalImage + "');";
                 command = new SqlCommand(sql, connectMe);
                 adapter.InsertCommand = new SqlCommand(sql, connectMe);

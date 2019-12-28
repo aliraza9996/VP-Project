@@ -36,24 +36,40 @@
             this.btnViewStudents = new System.Windows.Forms.Button();
             this.btnDeleteAttendance = new System.Windows.Forms.Button();
             this.btnDeleteStudent = new System.Windows.Forms.Button();
-            this.btnImportAttendance = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.label4 = new System.Windows.Forms.Label();
             this.btnMarkAttendance = new System.Windows.Forms.Button();
             this.pnlMarkAttendance = new System.Windows.Forms.Panel();
+            this.lblnameofstudent = new System.Windows.Forms.TextBox();
+            this.imgBoxMarkAttendance = new Emgu.CV.UI.ImageBox();
             this.button3 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
             this.button5 = new System.Windows.Forms.Button();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pnlDeleteAttendance = new System.Windows.Forms.Panel();
-            this.button7 = new System.Windows.Forms.Button();
-            this.button8 = new System.Windows.Forms.Button();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.pnlDelView = new System.Windows.Forms.Panel();
+            this.pbDelAtt = new System.Windows.Forms.PictureBox();
+            this.lblDelName = new System.Windows.Forms.Label();
+            this.btnDelAttendance = new System.Windows.Forms.Button();
+            this.lblDelEnroll = new System.Windows.Forms.Label();
+            this.btnViewDelAttendance = new System.Windows.Forms.Button();
+            this.lblEnterEnroll = new System.Windows.Forms.Label();
+            this.textBoxDeleteEnrollment = new System.Windows.Forms.TextBox();
             this.pnlViewAttendance = new System.Windows.Forms.Panel();
-            this.button2 = new System.Windows.Forms.Button();
-            this.listBox1 = new System.Windows.Forms.ListBox();
+            this.btnView = new System.Windows.Forms.Button();
             this.pnlMain = new System.Windows.Forms.Panel();
+            this.pnlAddStudent = new System.Windows.Forms.Panel();
+            this.imageBoxFinal = new Emgu.CV.UI.ImageBox();
+            this.txtBoxEnrollment = new System.Windows.Forms.TextBox();
+            this.txtBoxLBL = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
+            this.ttxtBoxName = new System.Windows.Forms.TextBox();
+            this.lblEnterName = new System.Windows.Forms.Label();
+            this.imageBox1 = new Emgu.CV.UI.ImageBox();
+            this.btnSaveFace = new System.Windows.Forms.Button();
+            this.button9 = new System.Windows.Forms.Button();
             this.pnlViewAllStudents = new System.Windows.Forms.Panel();
+            this.btnBack = new System.Windows.Forms.Button();
+            this.btnNext = new System.Windows.Forms.Button();
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
@@ -72,17 +88,6 @@
             this.txtboxDelStuSearch = new System.Windows.Forms.TextBox();
             this.btnDelInPnlDelstu = new System.Windows.Forms.Button();
             this.pnlSearchinPnlDel = new System.Windows.Forms.Button();
-            this.pnlAddStudent = new System.Windows.Forms.Panel();
-            this.imageBoxFinal = new Emgu.CV.UI.ImageBox();
-            this.txtBoxEnrollment = new System.Windows.Forms.TextBox();
-            this.txtBoxLBL = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.ttxtBoxName = new System.Windows.Forms.TextBox();
-            this.lblEnterName = new System.Windows.Forms.Label();
-            this.imageBox1 = new Emgu.CV.UI.ImageBox();
-            this.btnSaveFace = new System.Windows.Forms.Button();
-            this.button9 = new System.Windows.Forms.Button();
             this.btnStart = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
             this.lblCountAllFaces = new System.Windows.Forms.Label();
@@ -99,26 +104,32 @@
             this.btnSave = new System.Windows.Forms.Button();
             this.cameraBox = new Emgu.CV.UI.ImageBox();
             this.imageList2 = new System.Windows.Forms.ImageList(this.components);
-            this.btnBack = new System.Windows.Forms.Button();
-            this.btnNext = new System.Windows.Forms.Button();
+            this.btnbck = new System.Windows.Forms.Button();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.btnBckPnlMA = new System.Windows.Forms.Button();
+            this.btnbcVA = new System.Windows.Forms.Button();
+            this.btnHome = new System.Windows.Forms.Button();
+            this.btnhm = new System.Windows.Forms.Button();
             this.pnlMarkAttendance.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.imgBoxMarkAttendance)).BeginInit();
             this.pnlDeleteAttendance.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            this.pnlDelView.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbDelAtt)).BeginInit();
             this.pnlViewAttendance.SuspendLayout();
             this.pnlMain.SuspendLayout();
+            this.pnlAddStudent.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.imageBoxFinal)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.imageBox1)).BeginInit();
             this.pnlViewAllStudents.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             this.pnlDeleteStudent.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbDelStu)).BeginInit();
-            this.pnlAddStudent.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.imageBoxFinal)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.imageBox1)).BeginInit();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.IBOutput)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cameraBox)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // imageList1
@@ -155,6 +166,7 @@
             this.btnViewAttendance.Size = new System.Drawing.Size(149, 138);
             this.btnViewAttendance.TabIndex = 10;
             this.btnViewAttendance.UseVisualStyleBackColor = true;
+            this.btnViewAttendance.Click += new System.EventHandler(this.btnViewAttendance_Click);
             // 
             // btnAddStudent
             // 
@@ -196,6 +208,7 @@
             this.btnDeleteAttendance.Size = new System.Drawing.Size(145, 115);
             this.btnDeleteAttendance.TabIndex = 13;
             this.btnDeleteAttendance.UseVisualStyleBackColor = true;
+            this.btnDeleteAttendance.Click += new System.EventHandler(this.btnDeleteAttendance_Click);
             // 
             // btnDeleteStudent
             // 
@@ -211,20 +224,6 @@
             this.btnDeleteStudent.UseVisualStyleBackColor = true;
             this.btnDeleteStudent.Click += new System.EventHandler(this.btnDeleteStudent_Click);
             // 
-            // btnImportAttendance
-            // 
-            this.btnImportAttendance.FlatAppearance.BorderSize = 0;
-            this.btnImportAttendance.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnImportAttendance.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnImportAttendance.ImageIndex = 5;
-            this.btnImportAttendance.ImageList = this.imageList1;
-            this.btnImportAttendance.Location = new System.Drawing.Point(667, 50);
-            this.btnImportAttendance.Name = "btnImportAttendance";
-            this.btnImportAttendance.Size = new System.Drawing.Size(145, 138);
-            this.btnImportAttendance.TabIndex = 15;
-            this.btnImportAttendance.UseVisualStyleBackColor = true;
-            this.btnImportAttendance.Click += new System.EventHandler(this.btnImportAttendance_Click);
-            // 
             // button1
             // 
             this.button1.FlatAppearance.BorderSize = 0;
@@ -232,9 +231,9 @@
             this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button1.ImageIndex = 16;
             this.button1.ImageList = this.imageList1;
-            this.button1.Location = new System.Drawing.Point(666, 231);
+            this.button1.Location = new System.Drawing.Point(696, 63);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(145, 138);
+            this.button1.Size = new System.Drawing.Size(145, 304);
             this.button1.TabIndex = 16;
             this.button1.UseVisualStyleBackColor = true;
             // 
@@ -267,15 +266,33 @@
             // 
             // pnlMarkAttendance
             // 
+            this.pnlMarkAttendance.Controls.Add(this.lblnameofstudent);
+            this.pnlMarkAttendance.Controls.Add(this.imgBoxMarkAttendance);
             this.pnlMarkAttendance.Controls.Add(this.button3);
             this.pnlMarkAttendance.Controls.Add(this.button4);
             this.pnlMarkAttendance.Controls.Add(this.button5);
-            this.pnlMarkAttendance.Controls.Add(this.pictureBox1);
-            this.pnlMarkAttendance.Location = new System.Drawing.Point(96, 75);
+            this.pnlMarkAttendance.Location = new System.Drawing.Point(85, 70);
             this.pnlMarkAttendance.Name = "pnlMarkAttendance";
-            this.pnlMarkAttendance.Size = new System.Drawing.Size(82, 96);
+            this.pnlMarkAttendance.Size = new System.Drawing.Size(170, 96);
             this.pnlMarkAttendance.TabIndex = 18;
             this.pnlMarkAttendance.Visible = false;
+            this.pnlMarkAttendance.Paint += new System.Windows.Forms.PaintEventHandler(this.pnlMarkAttendance_Paint);
+            // 
+            // lblnameofstudent
+            // 
+            this.lblnameofstudent.Enabled = false;
+            this.lblnameofstudent.Location = new System.Drawing.Point(105, 37);
+            this.lblnameofstudent.Name = "lblnameofstudent";
+            this.lblnameofstudent.Size = new System.Drawing.Size(176, 20);
+            this.lblnameofstudent.TabIndex = 12;
+            // 
+            // imgBoxMarkAttendance
+            // 
+            this.imgBoxMarkAttendance.Location = new System.Drawing.Point(375, 50);
+            this.imgBoxMarkAttendance.Name = "imgBoxMarkAttendance";
+            this.imgBoxMarkAttendance.Size = new System.Drawing.Size(390, 250);
+            this.imgBoxMarkAttendance.TabIndex = 11;
+            this.imgBoxMarkAttendance.TabStop = false;
             // 
             // button3
             // 
@@ -285,109 +302,154 @@
             this.button3.TabIndex = 7;
             this.button3.Text = "Back";
             this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // button4
             // 
-            this.button4.Location = new System.Drawing.Point(114, 145);
+            this.button4.Location = new System.Drawing.Point(114, 176);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(167, 56);
             this.button4.TabIndex = 6;
             this.button4.Text = "Mark Attendance";
             this.button4.UseVisualStyleBackColor = true;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
             // button5
             // 
-            this.button5.Location = new System.Drawing.Point(114, 37);
+            this.button5.Location = new System.Drawing.Point(111, 100);
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(167, 56);
             this.button5.TabIndex = 5;
             this.button5.Text = "Capture";
             this.button5.UseVisualStyleBackColor = true;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Location = new System.Drawing.Point(380, -3);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(413, 376);
-            this.pictureBox1.TabIndex = 4;
-            this.pictureBox1.TabStop = false;
+            this.button5.Click += new System.EventHandler(this.button5_Click);
             // 
             // pnlDeleteAttendance
             // 
-            this.pnlDeleteAttendance.Controls.Add(this.button7);
-            this.pnlDeleteAttendance.Controls.Add(this.button8);
-            this.pnlDeleteAttendance.Controls.Add(this.pictureBox2);
-            this.pnlDeleteAttendance.Location = new System.Drawing.Point(307, 72);
+            this.pnlDeleteAttendance.Controls.Add(this.btnbcVA);
+            this.pnlDeleteAttendance.Controls.Add(this.pnlDelView);
+            this.pnlDeleteAttendance.Controls.Add(this.btnViewDelAttendance);
+            this.pnlDeleteAttendance.Controls.Add(this.lblEnterEnroll);
+            this.pnlDeleteAttendance.Controls.Add(this.textBoxDeleteEnrollment);
+            this.pnlDeleteAttendance.Location = new System.Drawing.Point(58, 35);
             this.pnlDeleteAttendance.Name = "pnlDeleteAttendance";
-            this.pnlDeleteAttendance.Size = new System.Drawing.Size(84, 88);
+            this.pnlDeleteAttendance.Size = new System.Drawing.Size(786, 305);
             this.pnlDeleteAttendance.TabIndex = 19;
             this.pnlDeleteAttendance.Visible = false;
+            this.pnlDeleteAttendance.Paint += new System.Windows.Forms.PaintEventHandler(this.pnlDeleteAttendance_Paint);
             // 
-            // button7
+            // pnlDelView
             // 
-            this.button7.Location = new System.Drawing.Point(121, 183);
-            this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(170, 64);
-            this.button7.TabIndex = 11;
-            this.button7.Text = "Delete";
-            this.button7.UseVisualStyleBackColor = true;
+            this.pnlDelView.Controls.Add(this.pbDelAtt);
+            this.pnlDelView.Controls.Add(this.lblDelName);
+            this.pnlDelView.Controls.Add(this.btnDelAttendance);
+            this.pnlDelView.Controls.Add(this.lblDelEnroll);
+            this.pnlDelView.Location = new System.Drawing.Point(379, 29);
+            this.pnlDelView.Name = "pnlDelView";
+            this.pnlDelView.Size = new System.Drawing.Size(498, 294);
+            this.pnlDelView.TabIndex = 26;
+            this.pnlDelView.Visible = false;
             // 
-            // button8
+            // pbDelAtt
             // 
-            this.button8.Location = new System.Drawing.Point(121, 68);
-            this.button8.Name = "button8";
-            this.button8.Size = new System.Drawing.Size(170, 64);
-            this.button8.TabIndex = 10;
-            this.button8.Text = "Scan";
-            this.button8.UseVisualStyleBackColor = true;
+            this.pbDelAtt.Location = new System.Drawing.Point(297, 18);
+            this.pbDelAtt.Name = "pbDelAtt";
+            this.pbDelAtt.Size = new System.Drawing.Size(180, 132);
+            this.pbDelAtt.TabIndex = 25;
+            this.pbDelAtt.TabStop = false;
             // 
-            // pictureBox2
+            // lblDelName
             // 
-            this.pictureBox2.Location = new System.Drawing.Point(424, 13);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(348, 345);
-            this.pictureBox2.TabIndex = 9;
-            this.pictureBox2.TabStop = false;
+            this.lblDelName.AutoSize = true;
+            this.lblDelName.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblDelName.Location = new System.Drawing.Point(36, 85);
+            this.lblDelName.Name = "lblDelName";
+            this.lblDelName.Size = new System.Drawing.Size(55, 20);
+            this.lblDelName.TabIndex = 24;
+            this.lblDelName.Text = "NAME";
+            // 
+            // btnDelAttendance
+            // 
+            this.btnDelAttendance.Location = new System.Drawing.Point(194, 209);
+            this.btnDelAttendance.Name = "btnDelAttendance";
+            this.btnDelAttendance.Size = new System.Drawing.Size(155, 46);
+            this.btnDelAttendance.TabIndex = 22;
+            this.btnDelAttendance.Text = "Delete Attendance";
+            this.btnDelAttendance.UseVisualStyleBackColor = true;
+            this.btnDelAttendance.Click += new System.EventHandler(this.btnDelAttendance_Click);
+            // 
+            // lblDelEnroll
+            // 
+            this.lblDelEnroll.AutoSize = true;
+            this.lblDelEnroll.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblDelEnroll.Location = new System.Drawing.Point(34, 40);
+            this.lblDelEnroll.Name = "lblDelEnroll";
+            this.lblDelEnroll.Size = new System.Drawing.Size(117, 20);
+            this.lblDelEnroll.TabIndex = 23;
+            this.lblDelEnroll.Text = "ENROLLMENT";
+            // 
+            // btnViewDelAttendance
+            // 
+            this.btnViewDelAttendance.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnViewDelAttendance.Location = new System.Drawing.Point(42, 147);
+            this.btnViewDelAttendance.Name = "btnViewDelAttendance";
+            this.btnViewDelAttendance.Size = new System.Drawing.Size(155, 46);
+            this.btnViewDelAttendance.TabIndex = 14;
+            this.btnViewDelAttendance.Text = "View";
+            this.btnViewDelAttendance.UseVisualStyleBackColor = true;
+            this.btnViewDelAttendance.Click += new System.EventHandler(this.btnViewDelAttendance_Click);
+            // 
+            // lblEnterEnroll
+            // 
+            this.lblEnterEnroll.AutoSize = true;
+            this.lblEnterEnroll.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblEnterEnroll.Location = new System.Drawing.Point(40, 49);
+            this.lblEnterEnroll.Name = "lblEnterEnroll";
+            this.lblEnterEnroll.Size = new System.Drawing.Size(144, 20);
+            this.lblEnterEnroll.TabIndex = 13;
+            this.lblEnterEnroll.Text = "Enter Enrollment";
+            // 
+            // textBoxDeleteEnrollment
+            // 
+            this.textBoxDeleteEnrollment.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBoxDeleteEnrollment.Location = new System.Drawing.Point(44, 96);
+            this.textBoxDeleteEnrollment.Name = "textBoxDeleteEnrollment";
+            this.textBoxDeleteEnrollment.Size = new System.Drawing.Size(222, 26);
+            this.textBoxDeleteEnrollment.TabIndex = 12;
             // 
             // pnlViewAttendance
             // 
-            this.pnlViewAttendance.Controls.Add(this.button2);
-            this.pnlViewAttendance.Controls.Add(this.listBox1);
-            this.pnlViewAttendance.Location = new System.Drawing.Point(493, 75);
+            this.pnlViewAttendance.Controls.Add(this.dataGridView1);
+            this.pnlViewAttendance.Controls.Add(this.btnbck);
+            this.pnlViewAttendance.Controls.Add(this.btnView);
+            this.pnlViewAttendance.Location = new System.Drawing.Point(474, 61);
             this.pnlViewAttendance.Name = "pnlViewAttendance";
-            this.pnlViewAttendance.Size = new System.Drawing.Size(91, 74);
+            this.pnlViewAttendance.Size = new System.Drawing.Size(153, 110);
             this.pnlViewAttendance.TabIndex = 20;
             this.pnlViewAttendance.Visible = false;
+            this.pnlViewAttendance.Paint += new System.Windows.Forms.PaintEventHandler(this.pnlViewAttendance_Paint);
             // 
-            // button2
+            // btnView
             // 
-            this.button2.Location = new System.Drawing.Point(131, 132);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(185, 64);
-            this.button2.TabIndex = 3;
-            this.button2.Text = "Click to view";
-            this.button2.UseVisualStyleBackColor = true;
-            // 
-            // listBox1
-            // 
-            this.listBox1.FormattingEnabled = true;
-            this.listBox1.Location = new System.Drawing.Point(439, 8);
-            this.listBox1.Name = "listBox1";
-            this.listBox1.Size = new System.Drawing.Size(337, 355);
-            this.listBox1.TabIndex = 2;
+            this.btnView.Location = new System.Drawing.Point(318, 281);
+            this.btnView.Name = "btnView";
+            this.btnView.Size = new System.Drawing.Size(158, 39);
+            this.btnView.TabIndex = 3;
+            this.btnView.Text = "Click to view";
+            this.btnView.UseVisualStyleBackColor = true;
+            this.btnView.Visible = false;
             // 
             // pnlMain
             // 
-            this.pnlMain.Controls.Add(this.pnlViewAllStudents);
+            this.pnlMain.Controls.Add(this.pnlDeleteAttendance);
             this.pnlMain.Controls.Add(this.pnlDeleteStudent);
+            this.pnlMain.Controls.Add(this.pnlViewAllStudents);
             this.pnlMain.Controls.Add(this.pnlAddStudent);
             this.pnlMain.Controls.Add(this.pnlViewAttendance);
-            this.pnlMain.Controls.Add(this.pnlDeleteAttendance);
             this.pnlMain.Controls.Add(this.pnlMarkAttendance);
             this.pnlMain.Controls.Add(this.btnMarkAttendance);
             this.pnlMain.Controls.Add(this.label4);
             this.pnlMain.Controls.Add(this.button1);
-            this.pnlMain.Controls.Add(this.btnImportAttendance);
             this.pnlMain.Controls.Add(this.btnDeleteStudent);
             this.pnlMain.Controls.Add(this.btnDeleteAttendance);
             this.pnlMain.Controls.Add(this.btnViewStudents);
@@ -397,9 +459,115 @@
             this.pnlMain.Name = "pnlMain";
             this.pnlMain.Size = new System.Drawing.Size(909, 376);
             this.pnlMain.TabIndex = 13;
+            this.pnlMain.Paint += new System.Windows.Forms.PaintEventHandler(this.pnlMain_Paint);
+            // 
+            // pnlAddStudent
+            // 
+            this.pnlAddStudent.Controls.Add(this.btnBckPnlMA);
+            this.pnlAddStudent.Controls.Add(this.imageBoxFinal);
+            this.pnlAddStudent.Controls.Add(this.txtBoxEnrollment);
+            this.pnlAddStudent.Controls.Add(this.txtBoxLBL);
+            this.pnlAddStudent.Controls.Add(this.label7);
+            this.pnlAddStudent.Controls.Add(this.ttxtBoxName);
+            this.pnlAddStudent.Controls.Add(this.lblEnterName);
+            this.pnlAddStudent.Controls.Add(this.imageBox1);
+            this.pnlAddStudent.Controls.Add(this.btnSaveFace);
+            this.pnlAddStudent.Controls.Add(this.button9);
+            this.pnlAddStudent.Location = new System.Drawing.Point(96, 242);
+            this.pnlAddStudent.Name = "pnlAddStudent";
+            this.pnlAddStudent.Size = new System.Drawing.Size(111, 104);
+            this.pnlAddStudent.TabIndex = 21;
+            this.pnlAddStudent.Visible = false;
+            this.pnlAddStudent.Paint += new System.Windows.Forms.PaintEventHandler(this.pnlViewAttendancew_Paint);
+            // 
+            // imageBoxFinal
+            // 
+            this.imageBoxFinal.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.imageBoxFinal.Location = new System.Drawing.Point(396, 247);
+            this.imageBoxFinal.Name = "imageBoxFinal";
+            this.imageBoxFinal.Size = new System.Drawing.Size(101, 101);
+            this.imageBoxFinal.TabIndex = 20;
+            this.imageBoxFinal.TabStop = false;
+            // 
+            // txtBoxEnrollment
+            // 
+            this.txtBoxEnrollment.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtBoxEnrollment.Location = new System.Drawing.Point(199, 189);
+            this.txtBoxEnrollment.Name = "txtBoxEnrollment";
+            this.txtBoxEnrollment.Size = new System.Drawing.Size(145, 26);
+            this.txtBoxEnrollment.TabIndex = 19;
+            // 
+            // txtBoxLBL
+            // 
+            this.txtBoxLBL.AutoSize = true;
+            this.txtBoxLBL.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtBoxLBL.Location = new System.Drawing.Point(93, 195);
+            this.txtBoxLBL.Name = "txtBoxLBL";
+            this.txtBoxLBL.Size = new System.Drawing.Size(100, 20);
+            this.txtBoxLBL.TabIndex = 18;
+            this.txtBoxLBL.Text = "Enrollment:";
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.Location = new System.Drawing.Point(56, 28);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(133, 20);
+            this.label7.TabIndex = 17;
+            this.label7.Text = "Detected face: ";
+            // 
+            // ttxtBoxName
+            // 
+            this.ttxtBoxName.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ttxtBoxName.Location = new System.Drawing.Point(199, 148);
+            this.ttxtBoxName.Name = "ttxtBoxName";
+            this.ttxtBoxName.Size = new System.Drawing.Size(145, 26);
+            this.ttxtBoxName.TabIndex = 14;
+            // 
+            // lblEnterName
+            // 
+            this.lblEnterName.AutoSize = true;
+            this.lblEnterName.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblEnterName.Location = new System.Drawing.Point(93, 154);
+            this.lblEnterName.Name = "lblEnterName";
+            this.lblEnterName.Size = new System.Drawing.Size(60, 20);
+            this.lblEnterName.TabIndex = 13;
+            this.lblEnterName.Text = "Name:";
+            // 
+            // imageBox1
+            // 
+            this.imageBox1.Location = new System.Drawing.Point(396, -11);
+            this.imageBox1.Name = "imageBox1";
+            this.imageBox1.Size = new System.Drawing.Size(390, 250);
+            this.imageBox1.TabIndex = 10;
+            this.imageBox1.TabStop = false;
+            // 
+            // btnSaveFace
+            // 
+            this.btnSaveFace.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSaveFace.Location = new System.Drawing.Point(197, 250);
+            this.btnSaveFace.Name = "btnSaveFace";
+            this.btnSaveFace.Size = new System.Drawing.Size(147, 39);
+            this.btnSaveFace.TabIndex = 12;
+            this.btnSaveFace.Text = "Save";
+            this.btnSaveFace.UseVisualStyleBackColor = true;
+            this.btnSaveFace.Click += new System.EventHandler(this.btnSaveFace_Click);
+            // 
+            // button9
+            // 
+            this.button9.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button9.Location = new System.Drawing.Point(199, 62);
+            this.button9.Name = "button9";
+            this.button9.Size = new System.Drawing.Size(147, 39);
+            this.button9.TabIndex = 11;
+            this.button9.Text = "Scan";
+            this.button9.UseVisualStyleBackColor = true;
+            this.button9.Click += new System.EventHandler(this.button9_Click_1);
             // 
             // pnlViewAllStudents
             // 
+            this.pnlViewAllStudents.Controls.Add(this.btnHome);
             this.pnlViewAllStudents.Controls.Add(this.btnBack);
             this.pnlViewAllStudents.Controls.Add(this.btnNext);
             this.pnlViewAllStudents.Controls.Add(this.pictureBox5);
@@ -411,11 +579,32 @@
             this.pnlViewAllStudents.Controls.Add(this.enroll3);
             this.pnlViewAllStudents.Controls.Add(this.enroll2);
             this.pnlViewAllStudents.Controls.Add(this.enroll1);
-            this.pnlViewAllStudents.Location = new System.Drawing.Point(485, 244);
+            this.pnlViewAllStudents.Location = new System.Drawing.Point(511, 272);
             this.pnlViewAllStudents.Name = "pnlViewAllStudents";
-            this.pnlViewAllStudents.Size = new System.Drawing.Size(110, 102);
+            this.pnlViewAllStudents.Size = new System.Drawing.Size(94, 71);
             this.pnlViewAllStudents.TabIndex = 23;
             this.pnlViewAllStudents.Visible = false;
+            this.pnlViewAllStudents.Paint += new System.Windows.Forms.PaintEventHandler(this.pnlViewAllStudents_Paint);
+            // 
+            // btnBack
+            // 
+            this.btnBack.Location = new System.Drawing.Point(281, 304);
+            this.btnBack.Name = "btnBack";
+            this.btnBack.Size = new System.Drawing.Size(117, 38);
+            this.btnBack.TabIndex = 13;
+            this.btnBack.Text = "Previous";
+            this.btnBack.UseVisualStyleBackColor = true;
+            this.btnBack.Click += new System.EventHandler(this.button6_Click_1);
+            // 
+            // btnNext
+            // 
+            this.btnNext.Location = new System.Drawing.Point(416, 306);
+            this.btnNext.Name = "btnNext";
+            this.btnNext.Size = new System.Drawing.Size(117, 38);
+            this.btnNext.TabIndex = 14;
+            this.btnNext.Text = "Next";
+            this.btnNext.UseVisualStyleBackColor = true;
+            this.btnNext.Click += new System.EventHandler(this.button10_Click_1);
             // 
             // pictureBox5
             // 
@@ -505,6 +694,7 @@
             // 
             // pnlDeleteStudent
             // 
+            this.pnlDeleteStudent.Controls.Add(this.btnhm);
             this.pnlDeleteStudent.Controls.Add(this.pbDelStu);
             this.pnlDeleteStudent.Controls.Add(this.lblDelStudentNAme);
             this.pnlDeleteStudent.Controls.Add(this.lblDelStudent);
@@ -513,9 +703,9 @@
             this.pnlDeleteStudent.Controls.Add(this.txtboxDelStuSearch);
             this.pnlDeleteStudent.Controls.Add(this.btnDelInPnlDelstu);
             this.pnlDeleteStudent.Controls.Add(this.pnlSearchinPnlDel);
-            this.pnlDeleteStudent.Location = new System.Drawing.Point(299, 227);
+            this.pnlDeleteStudent.Location = new System.Drawing.Point(288, 246);
             this.pnlDeleteStudent.Name = "pnlDeleteStudent";
-            this.pnlDeleteStudent.Size = new System.Drawing.Size(111, 130);
+            this.pnlDeleteStudent.Size = new System.Drawing.Size(143, 104);
             this.pnlDeleteStudent.TabIndex = 22;
             this.pnlDeleteStudent.Visible = false;
             this.pnlDeleteStudent.Paint += new System.Windows.Forms.PaintEventHandler(this.pnlDeleteStudent_Paint);
@@ -580,6 +770,7 @@
             // btnDelInPnlDelstu
             // 
             this.btnDelInPnlDelstu.Enabled = false;
+            this.btnDelInPnlDelstu.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnDelInPnlDelstu.Location = new System.Drawing.Point(271, 161);
             this.btnDelInPnlDelstu.Name = "btnDelInPnlDelstu";
             this.btnDelInPnlDelstu.Size = new System.Drawing.Size(108, 39);
@@ -590,6 +781,7 @@
             // 
             // pnlSearchinPnlDel
             // 
+            this.pnlSearchinPnlDel.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.pnlSearchinPnlDel.Location = new System.Drawing.Point(130, 161);
             this.pnlSearchinPnlDel.Name = "pnlSearchinPnlDel";
             this.pnlSearchinPnlDel.Size = new System.Drawing.Size(108, 39);
@@ -597,119 +789,6 @@
             this.pnlSearchinPnlDel.Text = "Search";
             this.pnlSearchinPnlDel.UseVisualStyleBackColor = true;
             this.pnlSearchinPnlDel.Click += new System.EventHandler(this.button10_Click);
-            // 
-            // pnlAddStudent
-            // 
-            this.pnlAddStudent.Controls.Add(this.imageBoxFinal);
-            this.pnlAddStudent.Controls.Add(this.txtBoxEnrollment);
-            this.pnlAddStudent.Controls.Add(this.txtBoxLBL);
-            this.pnlAddStudent.Controls.Add(this.label7);
-            this.pnlAddStudent.Controls.Add(this.label6);
-            this.pnlAddStudent.Controls.Add(this.ttxtBoxName);
-            this.pnlAddStudent.Controls.Add(this.lblEnterName);
-            this.pnlAddStudent.Controls.Add(this.imageBox1);
-            this.pnlAddStudent.Controls.Add(this.btnSaveFace);
-            this.pnlAddStudent.Controls.Add(this.button9);
-            this.pnlAddStudent.Location = new System.Drawing.Point(113, 227);
-            this.pnlAddStudent.Name = "pnlAddStudent";
-            this.pnlAddStudent.Size = new System.Drawing.Size(78, 130);
-            this.pnlAddStudent.TabIndex = 21;
-            this.pnlAddStudent.Visible = false;
-            this.pnlAddStudent.Paint += new System.Windows.Forms.PaintEventHandler(this.pnlViewAttendancew_Paint);
-            // 
-            // imageBoxFinal
-            // 
-            this.imageBoxFinal.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.imageBoxFinal.Location = new System.Drawing.Point(396, 247);
-            this.imageBoxFinal.Name = "imageBoxFinal";
-            this.imageBoxFinal.Size = new System.Drawing.Size(101, 101);
-            this.imageBoxFinal.TabIndex = 20;
-            this.imageBoxFinal.TabStop = false;
-            // 
-            // txtBoxEnrollment
-            // 
-            this.txtBoxEnrollment.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtBoxEnrollment.Location = new System.Drawing.Point(199, 189);
-            this.txtBoxEnrollment.Name = "txtBoxEnrollment";
-            this.txtBoxEnrollment.Size = new System.Drawing.Size(145, 26);
-            this.txtBoxEnrollment.TabIndex = 19;
-            // 
-            // txtBoxLBL
-            // 
-            this.txtBoxLBL.AutoSize = true;
-            this.txtBoxLBL.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtBoxLBL.Location = new System.Drawing.Point(93, 195);
-            this.txtBoxLBL.Name = "txtBoxLBL";
-            this.txtBoxLBL.Size = new System.Drawing.Size(100, 20);
-            this.txtBoxLBL.TabIndex = 18;
-            this.txtBoxLBL.Text = "Enrollment:";
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(20, 57);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(35, 13);
-            this.label7.TabIndex = 17;
-            this.label7.Text = "label7";
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(196, 12);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(51, 20);
-            this.label6.TabIndex = 15;
-            this.label6.Text = "label1";
-            // 
-            // ttxtBoxName
-            // 
-            this.ttxtBoxName.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ttxtBoxName.Location = new System.Drawing.Point(199, 148);
-            this.ttxtBoxName.Name = "ttxtBoxName";
-            this.ttxtBoxName.Size = new System.Drawing.Size(145, 26);
-            this.ttxtBoxName.TabIndex = 14;
-            // 
-            // lblEnterName
-            // 
-            this.lblEnterName.AutoSize = true;
-            this.lblEnterName.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblEnterName.Location = new System.Drawing.Point(93, 154);
-            this.lblEnterName.Name = "lblEnterName";
-            this.lblEnterName.Size = new System.Drawing.Size(60, 20);
-            this.lblEnterName.TabIndex = 13;
-            this.lblEnterName.Text = "Name:";
-            // 
-            // imageBox1
-            // 
-            this.imageBox1.Location = new System.Drawing.Point(396, -11);
-            this.imageBox1.Name = "imageBox1";
-            this.imageBox1.Size = new System.Drawing.Size(390, 250);
-            this.imageBox1.TabIndex = 10;
-            this.imageBox1.TabStop = false;
-            // 
-            // btnSaveFace
-            // 
-            this.btnSaveFace.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSaveFace.Location = new System.Drawing.Point(197, 250);
-            this.btnSaveFace.Name = "btnSaveFace";
-            this.btnSaveFace.Size = new System.Drawing.Size(147, 39);
-            this.btnSaveFace.TabIndex = 12;
-            this.btnSaveFace.Text = "Save";
-            this.btnSaveFace.UseVisualStyleBackColor = true;
-            this.btnSaveFace.Click += new System.EventHandler(this.btnSaveFace_Click);
-            // 
-            // button9
-            // 
-            this.button9.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button9.Location = new System.Drawing.Point(199, 62);
-            this.button9.Name = "button9";
-            this.button9.Size = new System.Drawing.Size(147, 39);
-            this.button9.TabIndex = 11;
-            this.button9.Text = "Scan";
-            this.button9.UseVisualStyleBackColor = true;
-            this.button9.Click += new System.EventHandler(this.button9_Click_1);
             // 
             // btnStart
             // 
@@ -899,25 +978,69 @@
             this.imageList2.ImageSize = new System.Drawing.Size(16, 16);
             this.imageList2.TransparentColor = System.Drawing.Color.Transparent;
             // 
-            // btnBack
+            // btnbck
             // 
-            this.btnBack.Location = new System.Drawing.Point(302, 328);
-            this.btnBack.Name = "btnBack";
-            this.btnBack.Size = new System.Drawing.Size(75, 23);
-            this.btnBack.TabIndex = 13;
-            this.btnBack.Text = "Back";
-            this.btnBack.UseVisualStyleBackColor = true;
-            this.btnBack.Click += new System.EventHandler(this.button6_Click_1);
+            this.btnbck.Location = new System.Drawing.Point(505, 281);
+            this.btnbck.Name = "btnbck";
+            this.btnbck.Size = new System.Drawing.Size(158, 39);
+            this.btnbck.TabIndex = 4;
+            this.btnbck.Text = "Back";
+            this.btnbck.UseVisualStyleBackColor = true;
+            this.btnbck.Click += new System.EventHandler(this.button6_Click_2);
             // 
-            // btnNext
+            // dataGridView1
             // 
-            this.btnNext.Location = new System.Drawing.Point(412, 327);
-            this.btnNext.Name = "btnNext";
-            this.btnNext.Size = new System.Drawing.Size(75, 23);
-            this.btnNext.TabIndex = 14;
-            this.btnNext.Text = "Next";
-            this.btnNext.UseVisualStyleBackColor = true;
-            this.btnNext.Click += new System.EventHandler(this.button10_Click_1);
+            this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dataGridView1.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Location = new System.Drawing.Point(51, -9);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.Size = new System.Drawing.Size(770, 218);
+            this.dataGridView1.TabIndex = 5;
+            // 
+            // btnBckPnlMA
+            // 
+            this.btnBckPnlMA.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnBckPnlMA.Location = new System.Drawing.Point(43, 249);
+            this.btnBckPnlMA.Name = "btnBckPnlMA";
+            this.btnBckPnlMA.Size = new System.Drawing.Size(110, 38);
+            this.btnBckPnlMA.TabIndex = 21;
+            this.btnBckPnlMA.Text = "Back";
+            this.btnBckPnlMA.UseVisualStyleBackColor = true;
+            this.btnBckPnlMA.Click += new System.EventHandler(this.btnBckPnlMA_Click);
+            // 
+            // btnbcVA
+            // 
+            this.btnbcVA.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnbcVA.Location = new System.Drawing.Point(218, 147);
+            this.btnbcVA.Name = "btnbcVA";
+            this.btnbcVA.Size = new System.Drawing.Size(136, 46);
+            this.btnbcVA.TabIndex = 27;
+            this.btnbcVA.Text = "Back";
+            this.btnbcVA.UseVisualStyleBackColor = true;
+            this.btnbcVA.Click += new System.EventHandler(this.btnbcVA_Click);
+            // 
+            // btnHome
+            // 
+            this.btnHome.Location = new System.Drawing.Point(146, 304);
+            this.btnHome.Name = "btnHome";
+            this.btnHome.Size = new System.Drawing.Size(117, 38);
+            this.btnHome.TabIndex = 15;
+            this.btnHome.Text = "Home";
+            this.btnHome.UseVisualStyleBackColor = true;
+            this.btnHome.Click += new System.EventHandler(this.btnHome_Click);
+            // 
+            // btnhm
+            // 
+            this.btnhm.Enabled = false;
+            this.btnhm.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnhm.Location = new System.Drawing.Point(187, 236);
+            this.btnhm.Name = "btnhm";
+            this.btnhm.Size = new System.Drawing.Size(169, 39);
+            this.btnhm.TabIndex = 32;
+            this.btnhm.Text = "Back to Home";
+            this.btnhm.UseVisualStyleBackColor = true;
+            this.btnhm.Click += new System.EventHandler(this.btnhm_Click);
             // 
             // FaceRecognitionSystem
             // 
@@ -941,15 +1064,23 @@
             this.KeyPreview = true;
             this.Name = "FaceRecognitionSystem";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Welcome to Feature Technology";
+            this.Text = "BUIC Attendance System";
             this.Load += new System.EventHandler(this.FaceRecognitionSystem_Load);
             this.pnlMarkAttendance.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.pnlMarkAttendance.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.imgBoxMarkAttendance)).EndInit();
             this.pnlDeleteAttendance.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            this.pnlDeleteAttendance.PerformLayout();
+            this.pnlDelView.ResumeLayout(false);
+            this.pnlDelView.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbDelAtt)).EndInit();
             this.pnlViewAttendance.ResumeLayout(false);
             this.pnlMain.ResumeLayout(false);
             this.pnlMain.PerformLayout();
+            this.pnlAddStudent.ResumeLayout(false);
+            this.pnlAddStudent.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.imageBoxFinal)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.imageBox1)).EndInit();
             this.pnlViewAllStudents.ResumeLayout(false);
             this.pnlViewAllStudents.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
@@ -958,14 +1089,11 @@
             this.pnlDeleteStudent.ResumeLayout(false);
             this.pnlDeleteStudent.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbDelStu)).EndInit();
-            this.pnlAddStudent.ResumeLayout(false);
-            this.pnlAddStudent.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.imageBoxFinal)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.imageBox1)).EndInit();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.IBOutput)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.cameraBox)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -979,7 +1107,6 @@
         private System.Windows.Forms.Button btnViewStudents;
         private System.Windows.Forms.Button btnDeleteAttendance;
         private System.Windows.Forms.Button btnDeleteStudent;
-        private System.Windows.Forms.Button btnImportAttendance;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Button btnMarkAttendance;
@@ -987,14 +1114,9 @@
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.Button button5;
-        private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Panel pnlDeleteAttendance;
-        private System.Windows.Forms.Button button7;
-        private System.Windows.Forms.Button button8;
-        private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.Panel pnlViewAttendance;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.ListBox listBox1;
+        private System.Windows.Forms.Button btnView;
         private System.Windows.Forms.Panel pnlMain;
         private System.Windows.Forms.Panel pnlAddStudent;
         private System.Windows.Forms.Button btnStart;
@@ -1012,7 +1134,6 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button btnSave;
         public Emgu.CV.UI.ImageBox cameraBox;
-        private System.Windows.Forms.Label label6;
         private System.Windows.Forms.TextBox ttxtBoxName;
         private System.Windows.Forms.Label lblEnterName;
         private Emgu.CV.UI.ImageBox imageBox1;
@@ -1044,6 +1165,22 @@
         private System.Windows.Forms.Label enroll1;
         private System.Windows.Forms.Button btnBack;
         private System.Windows.Forms.Button btnNext;
+        private Emgu.CV.UI.ImageBox imgBoxMarkAttendance;
+        private System.Windows.Forms.Button btnViewDelAttendance;
+        private System.Windows.Forms.Label lblEnterEnroll;
+        private System.Windows.Forms.TextBox textBoxDeleteEnrollment;
+        private System.Windows.Forms.Panel pnlDelView;
+        private System.Windows.Forms.PictureBox pbDelAtt;
+        private System.Windows.Forms.Label lblDelName;
+        private System.Windows.Forms.Label lblDelEnroll;
+        private System.Windows.Forms.Button btnDelAttendance;
+        private System.Windows.Forms.TextBox lblnameofstudent;
+        private System.Windows.Forms.Button btnbck;
+        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.Button btnBckPnlMA;
+        private System.Windows.Forms.Button btnbcVA;
+        private System.Windows.Forms.Button btnHome;
+        private System.Windows.Forms.Button btnhm;
     }
 }
 
