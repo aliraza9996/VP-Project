@@ -357,11 +357,11 @@ namespace KSLR_R_FaceRecognitionsSystem
             pnlViewAllStudents.Show();
             pnlViewAllStudents.Location = new Point(0, 0);
             pnlViewAllStudents.Size = new Size(924, 462);
-            if (i==ListEnroll.Count)
-            {
-                btnNext.Enabled = false;
-                btnBack.Enabled = false;
-            }
+            //if (i==ListEnroll.Count)
+            //{
+            //    btnNext.Enabled = false;
+            //    btnBack.Enabled = false;
+            //}
 
             set();
         }
@@ -678,7 +678,7 @@ namespace KSLR_R_FaceRecognitionsSystem
             SqlConnection connectMe = connObj.conn();
             SqlCommand cmd = connectMe.CreateCommand();
             cmd.CommandType = CommandType.Text;
-            cmd.CommandText = "Delete from Attendance where ID=" + textBoxDeleteEnrollment.Text;
+            cmd.CommandText = "Delete from Attendance where Enrollment=" + textBoxDeleteEnrollment.Text;
             cmd.ExecuteNonQuery();
             connectMe.Close();
             MessageBox.Show("Student Deleted Successfully");
@@ -731,6 +731,11 @@ namespace KSLR_R_FaceRecognitionsSystem
         private void btnhm_Click(object sender, EventArgs e)
         {
             pnlDeleteStudent.Hide();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
 
         private void btnImportAttendance_Click(object sender, EventArgs e)

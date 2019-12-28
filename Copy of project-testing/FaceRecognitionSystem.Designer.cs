@@ -236,6 +236,7 @@
             this.button1.Size = new System.Drawing.Size(145, 304);
             this.button1.TabIndex = 16;
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // label4
             // 
@@ -331,9 +332,9 @@
             this.pnlDeleteAttendance.Controls.Add(this.btnViewDelAttendance);
             this.pnlDeleteAttendance.Controls.Add(this.lblEnterEnroll);
             this.pnlDeleteAttendance.Controls.Add(this.textBoxDeleteEnrollment);
-            this.pnlDeleteAttendance.Location = new System.Drawing.Point(58, 35);
+            this.pnlDeleteAttendance.Location = new System.Drawing.Point(282, 229);
             this.pnlDeleteAttendance.Name = "pnlDeleteAttendance";
-            this.pnlDeleteAttendance.Size = new System.Drawing.Size(786, 305);
+            this.pnlDeleteAttendance.Size = new System.Drawing.Size(173, 120);
             this.pnlDeleteAttendance.TabIndex = 19;
             this.pnlDeleteAttendance.Visible = false;
             this.pnlDeleteAttendance.Paint += new System.Windows.Forms.PaintEventHandler(this.pnlDeleteAttendance_Paint);
@@ -422,7 +423,7 @@
             this.pnlViewAttendance.Controls.Add(this.dataGridView1);
             this.pnlViewAttendance.Controls.Add(this.btnbck);
             this.pnlViewAttendance.Controls.Add(this.btnView);
-            this.pnlViewAttendance.Location = new System.Drawing.Point(474, 61);
+            this.pnlViewAttendance.Location = new System.Drawing.Point(478, 61);
             this.pnlViewAttendance.Name = "pnlViewAttendance";
             this.pnlViewAttendance.Size = new System.Drawing.Size(153, 110);
             this.pnlViewAttendance.TabIndex = 20;
@@ -703,9 +704,9 @@
             this.pnlDeleteStudent.Controls.Add(this.txtboxDelStuSearch);
             this.pnlDeleteStudent.Controls.Add(this.btnDelInPnlDelstu);
             this.pnlDeleteStudent.Controls.Add(this.pnlSearchinPnlDel);
-            this.pnlDeleteStudent.Location = new System.Drawing.Point(288, 246);
+            this.pnlDeleteStudent.Location = new System.Drawing.Point(275, 63);
             this.pnlDeleteStudent.Name = "pnlDeleteStudent";
-            this.pnlDeleteStudent.Size = new System.Drawing.Size(143, 104);
+            this.pnlDeleteStudent.Size = new System.Drawing.Size(135, 99);
             this.pnlDeleteStudent.TabIndex = 22;
             this.pnlDeleteStudent.Visible = false;
             this.pnlDeleteStudent.Paint += new System.Windows.Forms.PaintEventHandler(this.pnlDeleteStudent_Paint);
@@ -1032,7 +1033,6 @@
             // 
             // btnhm
             // 
-            this.btnhm.Enabled = false;
             this.btnhm.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnhm.Location = new System.Drawing.Point(187, 236);
             this.btnhm.Name = "btnhm";
